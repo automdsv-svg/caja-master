@@ -168,12 +168,12 @@
     .ticket .small{font-size:11px}
   }
 
-  /* === Totales al lado del botón Aplicar filtros === */
+  /* === Totales al lado del botÃ³n Aplicar filtros === */
   .filtros-acciones { margin-top: 8px; }
   #totalesHeader { font-weight:500; }
 
 
-/* === Empleados modal (mínimo y consistente) === */
+/* === Empleados modal (mÃ­nimo y consistente) === */
 #dlgEmpleados{width:min(820px,calc(100vw - 32px));max-width:820px;padding:12px}
 #dlgEmpleados .modal-box{width:100%;max-width:none}
 #dlgEmpleados .modal-header{margin-bottom:6px}
@@ -281,7 +281,7 @@
 .btn-pill svg{ color: currentColor; opacity:.95; }
 
 
-/* === Botón Registrar con icono de ticket (premium) === */
+/* === BotÃ³n Registrar con icono de ticket (premium) === */
 #btnRegistrar.btn-registrar{
   display:inline-flex; align-items:center; gap:8px;
   padding:12px 18px; border-radius:14px;
@@ -322,7 +322,7 @@
 }
 
 
-/* === KPIs: grid y tarjetas (parche visual, sin tocar lógica) === */
+/* === KPIs: grid y tarjetas (parche visual, sin tocar lÃ³gica) === */
 /* Hotfix: layout estable, sin superposiciones ni cambios en el grid original */
 .kpi-grid{
   display:flex;
@@ -332,10 +332,10 @@
 }
 .kpi-card{
   position:relative;
-  flex: 1 1 260px;      /* ancho fluido, mínimo 260px */
+  flex: 1 1 260px;      /* ancho fluido, mÃ­nimo 260px */
   min-width:260px;
   max-width:100%;
-  overflow:hidden;      /* evita que valores se “salgan” */
+  overflow:hidden;      /* evita que valores se â€œsalganâ€ */
   border-radius:16px;
   padding:16px 18px;
   background: radial-gradient(120% 120% at -20% -20%, rgba(255,255,255,0.06) 0%, rgba(255,255,255,0.02) 60%, rgba(255,255,255,0.01) 100%);
@@ -358,7 +358,7 @@
   font-weight:800;
   font-variant-numeric: tabular-nums;
   letter-spacing:.2px;
-  font-size: clamp(26px, 3.6vw, 36px); /* más contenido, menos riesgo de solaparse */
+  font-size: clamp(26px, 3.6vw, 36px); /* mÃ¡s contenido, menos riesgo de solaparse */
   line-height:1.08;
   color:#EEF2FF;
   margin-bottom:4px;
@@ -381,7 +381,7 @@
 .kpi--efectivo{ border-left:3px solid rgba(250,204,21,0.55); }
 
 @media (min-width:1400px){
-  .kpi-value{ font-size:40px; } /* valor más conservador */
+  .kpi-value{ font-size:40px; } /* valor mÃ¡s conservador */
 }
 }
 
@@ -415,7 +415,7 @@
 @media (max-width:700px){#dlgEmitirTicket .ticket-tx-grid .tx-col-6,#dlgEmitirTicket .ticket-tx-grid .tx-col-4{grid-column:span 12}}
 
 
-/* === Cuentas por cobrar (módulo aislado) === */
+/* === Cuentas por cobrar (mÃ³dulo aislado) === */
 .btn-cxc{
   background: linear-gradient(180deg, rgba(245,158,11,0.28), rgba(245,158,11,0.13));
   border-color: rgba(245,158,11,0.38);
@@ -499,7 +499,7 @@
 
 
 
-/* === Proveedores: facturas a crédito (módulo aislado) === */
+/* === Proveedores: facturas a crÃ©dito (mÃ³dulo aislado) === */
 .btn-proveedores{background:linear-gradient(180deg,rgba(14,165,233,.28),rgba(14,165,233,.13));border-color:rgba(14,165,233,.38)}
 .btn-proveedores:hover{background:linear-gradient(180deg,rgba(14,165,233,.42),rgba(14,165,233,.20));box-shadow:0 0 26px rgba(14,165,233,.38)}
 #dlgProveedores input,#dlgProveedores select,#dlgProveedores textarea,#dlgEditarFacturaProveedor input,#dlgEditarFacturaProveedor select,#dlgEditarFacturaProveedor textarea,#dlgPagarFacturasProveedor input,#dlgPagarFacturasProveedor select{width:100%;padding:11px 12px;border-radius:12px;border:1px solid var(--ring);background:#07101f;color:var(--text);font-size:14px;outline:none}
@@ -567,9 +567,9 @@
       <div class="card">
         <div id="panelActualizacion" style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px;">
           <div style="font-size:13px;color:#94a3b8;">
-            Última actualización: <span id="ultimaFecha">(sin registro)</span>
+            Ãšltima actualizaciÃ³n: <span id="ultimaFecha">(sin registro)</span>
           </div>
-          <button id="btnActualizarExcel" class="btn-outline" style="font-size:12px;padding:6px 10px;">🔄 Actualizar Excel</button>
+          <button id="btnActualizarExcel" class="btn-outline" style="font-size:12px;padding:6px 10px;">ðŸ”„ Actualizar Excel</button>
         </div>
         <h3>Saldo actual</h3>
         <div class="amount" id="kpiSaldo" class="kpi-value">$0.00</div>
@@ -590,7 +590,7 @@
         <h3>Efectivo en bancos</h3>
         <div class="bank-balances">
           <div class="bank-balance-item bank-balance-total"><span>Total bancos</span><strong id="kpiBancos">$0.00</strong></div>
-          <div class="bank-balance-item"><span>Banco Agrícola</span><strong id="kpiBancoAgricola">$0.00</strong></div>
+          <div class="bank-balance-item"><span>Banco AgrÃ­cola</span><strong id="kpiBancoAgricola">$0.00</strong></div>
           <div class="bank-balance-item"><span>BAC Credomatic</span><strong id="kpiBancoBAC">$0.00</strong></div>
         </div>
       </div>
@@ -601,14 +601,14 @@
       <div class="group">
         <div class="row">
           <div class="col-12" id="descGroup">
-            <label for="desc">Descripción de la operación</label>
+            <label for="desc">DescripciÃ³n de la operaciÃ³n</label>
             <input id="desc" type="text" placeholder="Ej. Pago cliente, compra insumo" autocomplete="off" />
           </div>
         </div>
 
         <div class="row">
           <div class="col-4">
-            <label for="metodo">Método</label>
+            <label for="metodo">MÃ©todo</label>
             <select id="metodo">
               <option value="Efectivo">Efectivo</option>
               <option value="Transferencia">Transferencia</option>
@@ -618,11 +618,11 @@
           <div class="col-4" id="bankGroup">
             <label for="banco">Banco</label>
             <select id="banco">
-              <option value="Agrícola">Banco Agrícola</option>
+              <option value="AgrÃ­cola">Banco AgrÃ­cola</option>
               <option value="BAC">BAC Credomatic</option>
               <option value="Otros">Otros</option>
             </select>
-            <div class="help">Visible solo si el método es Transferencia</div>
+            <div class="help">Visible solo si el mÃ©todo es Transferencia</div>
           </div>
 
           <div class="col-4" id="otherBankWrap" style="display:none">
@@ -637,16 +637,16 @@
               <option value="Entrada">Entrada de dinero</option>
               <option value="Salida">Salida de dinero</option>
               <option value="Pagos especiales">Pagos especiales</option>
-              <option value="Capital o préstamos">Capital o préstamos</option>
+              <option value="Capital o prÃ©stamos">Capital o prÃ©stamos</option>
             </select>
           </div>
 
           <div class="col-4" id="specialPaymentWrap" style="display:none">
-            <label for="pagoEspecial">Categoría de pago especial</label>
+            <label for="pagoEspecial">CategorÃ­a de pago especial</label>
             <select id="pagoEspecial">
-              <option value="">Selecciona una opción</option>
+              <option value="">Selecciona una opciÃ³n</option>
               <option value="Ganancia">Ganancia</option>
-              <option value="Compensación a propietario">Compensación a propietario</option>
+              <option value="CompensaciÃ³n a propietario">CompensaciÃ³n a propietario</option>
               <option value="Impuestos">Impuestos</option>
               <option value="Gastos operativos">Gastos operativos</option>
               <option value="Remesa">Remesa</option>
@@ -659,12 +659,12 @@
           <div class="col-4" id="specialPercentageWrap">
             <label for="porcentajeEspecial">Porcentaje</label>
             <input id="porcentajeEspecial" type="number" min="0" step="0.01" placeholder="0.00" />
-            <div class="help">Se aplicará sobre la suma de ingresos del rango seleccionado.</div>
+            <div class="help">Se aplicarÃ¡ sobre la suma de ingresos del rango seleccionado.</div>
           </div>
           <div class="col-4" id="specialIngresosWrap">
             <label for="totalIngresosEspecial">Total de ingresos actuales</label>
             <input id="totalIngresosEspecial" type="text" readonly placeholder="0.00" />
-            <div class="help">Suma automática del monto de todas las entradas dentro del rango.</div>
+            <div class="help">Suma automÃ¡tica del monto de todas las entradas dentro del rango.</div>
           </div>
           <div class="col-4" id="specialRangeWrap">
             <label>Rango de fechas</label>
@@ -672,7 +672,7 @@
               <input id="rangoEspecialDesde" type="date" />
               <input id="rangoEspecialHasta" type="date" />
             </div>
-            <div class="help">Solo se tomarán transacciones de tipo Entrada dentro del rango.</div>
+            <div class="help">Solo se tomarÃ¡n transacciones de tipo Entrada dentro del rango.</div>
           </div>
         </div>
 
@@ -693,7 +693,7 @@
             </div>
 </div>
           <div class="col-3 actions">
-            <button id="btnRegistrar" class="btn-primary btn-registrar" title="Registrar transacción"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:8px;"><path d="M3 9a2 2 0 0 0 0 6h18a2 2 0 0 0 0-6H3z"/><path d="M9 9v6"/><path d="M15 9v6"/></svg><span>Registrar</span></button>
+            <button id="btnRegistrar" class="btn-primary btn-registrar" title="Registrar transacciÃ³n"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:8px;"><path d="M3 9a2 2 0 0 0 0 6h18a2 2 0 0 0 0-6H3z"/><path d="M9 9v6"/><path d="M15 9v6"/></svg><span>Registrar</span></button>
             <button id="btnEmitirTicket" class="btn-primary btn-registrar" type="button" title="Emitir ticket manual"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:8px;"><path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1-2-1Z"/><path d="M8 7h8"/><path d="M8 11h8"/><path d="M8 15h5"/></svg><span>Emitir ticket</span></button>
           </div>
 
@@ -704,13 +704,13 @@
     <div class="external-actions-title">Accesos</div>
     <div class="external-actions-list">
       <a id="btnGistSolutionDev" class="btn-pill btn-gist" href="https://online.gistsdev.com/" target="_blank" rel="noopener noreferrer" title="Abrir GIST SOLUTION DEV"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:8px;"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span>GIST SOLUTION DEV</span></a>
-      <a id="btnOutlook" class="btn-pill btn-outlook" href="ms-outlook://inbox" title="Abrir correo de facturación digital"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:8px;"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><span>Correo facturación digital</span></a>
+      <a id="btnOutlook" class="btn-pill btn-outlook" href="ms-outlook://inbox" title="Abrir correo de facturaciÃ³n digital"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:8px;"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg><span>Correo facturaciÃ³n digital</span></a>
       <a id="btnWhatsAppBusiness" class="btn-pill btn-whatsapp" href="whatsapp://" title="Abrir WhatsApp Business"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:8px;"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.5 9.5 9.5 0 0 1-4-.9L3 21l1.8-4.7A8.5 8.5 0 1 1 21 11.5Z"/><path d="M8.5 8.5c.5 3 2 4.5 5 5"/><path d="M14.2 13.4l1.2-1.2"/><path d="M8.6 9.8l1.2-1.2"/></svg><span>WhatsApp Business</span></a>
       <a id="btnAgenda" class="btn-pill btn-agenda" href="onecalendar:" title="Abrir One Calendar"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:8px;"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M16 2v4"/><path d="M8 2v4"/><path d="M3 10h18"/><path d="M8 14h.01"/><path d="M12 14h.01"/><path d="M16 14h.01"/><path d="M8 18h.01"/><path d="M12 18h.01"/></svg><span>Agenda</span></a>
       <button id="btnEmpleados" class="btn-pill btn-emp"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:8px;"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg><span>Empleados</span></button>
       <button id="btnProveedores" class="btn-pill btn-proveedores" type="button" title="Proveedores"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:8px;"><path d="M3 7h18"/><path d="M5 7v13h14V7"/><path d="M8 7V4h8v3"/><path d="M9 12h6"/><path d="M9 16h6"/></svg><span>Proveedores</span></button>
       <button id="btnCuentasCobrar" class="btn-pill btn-cxc" type="button" title="Cuentas por cobrar"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:8px;"><path d="M3 3v18h18"/><path d="M7 15h3v3H7z"/><path d="M12 9h3v9h-3z"/><path d="M17 5h3v13h-3z"/></svg><span>Cuentas por cobrar</span></button>
-      <button id="btnEstadisticas" class="btn-pill btn-ctrl"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:8px;"><path d="M12 20V10"/><path d="M18 20V4"/><path d="M6 20v-4"/></svg><span>Estadística</span></button>
+      <button id="btnEstadisticas" class="btn-pill btn-ctrl"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:8px;"><path d="M12 20V10"/><path d="M18 20V4"/><path d="M6 20v-4"/></svg><span>EstadÃ­stica</span></button>
       <button id="btnVerControl" class="btn-pill btn-ctrl"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:8px;"><rect x="3" y="3" width="7" height="9"/><rect x="14" y="3" width="7" height="5"/><rect x="14" y="12" width="7" height="9"/><rect x="3" y="14" width="7" height="7"/></svg><span>Ver control</span></button>
       <button id="btnVerRegistro" class="btn-pill btn-reg"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:8px;"><path d="M14 2H6a2 2 0 0 0-2 2v16l4-4h10a2 2 0 0 0 2-2V6a4 4 0 0 0-4-4z"/></svg><span>Ver registro</span></button>
     </div>
@@ -722,7 +722,10 @@
         <button id="btnElegirExcel" class="btn-outline" style="font-size:13px;padding:10px 14px;white-space:nowrap;">Elegir carpeta para guardar</button>
         <button id="btnExportarExcel" class="btn-muted" style="font-size:13px;padding:10px 14px;white-space:nowrap;">Descargar Excel</button>
         <button id="btnImportarExcel" class="btn-primary" style="font-size:13px;padding:10px 14px;white-space:nowrap;">Cargar respaldo</button>
+        <button id="btnGuardarGoogleSheet" class="btn-outline" style="font-size:13px;padding:10px 14px;white-space:nowrap;">Guardar en Google Sheet</button>
+        <button id="btnCargarGoogleSheet" class="btn-outline" style="font-size:13px;padding:10px 14px;white-space:nowrap;">Cargar Google Sheet</button>
       </div>
+      <div id="googleSheetStatus" class="help" style="text-align:right;margin-top:8px"></div>
     </div>
   </div>
 </div>
@@ -739,7 +742,7 @@
         <div class="registro-searchbar">
           <div class="registro-search-field">
             <label for="registroBuscar">Buscar registros</label>
-            <input id="registroBuscar" type="text" placeholder="ID, fecha, descripción, método, banco, tipo o monto..." autocomplete="off">
+            <input id="registroBuscar" type="text" placeholder="ID, fecha, descripciÃ³n, mÃ©todo, banco, tipo o monto..." autocomplete="off">
           </div>
           <button id="btnLimpiarBusquedaRegistro" class="btn-outline" type="button">Limpiar</button>
           <div id="registroSearchCount" class="registro-search-count"></div>
@@ -750,8 +753,8 @@
               <th><input type="checkbox" id="chkAllReg"></th>
               <th>ID</th>
               <th>Fecha/Hora</th>
-              <th>Descripción</th>
-              <th>Método</th>
+              <th>DescripciÃ³n</th>
+              <th>MÃ©todo</th>
               <th>Banco</th>
               <th>Tipo</th>
               <th class="t-right">Monto (USD)</th>
@@ -788,15 +791,15 @@
             <select id="fPagoEspecial">
               <option value="">Todos los pagos especiales</option>
               <option value="Ganancia">Ganancia</option>
-              <option value="Compensación a propietario">Compensación a propietario</option>
+              <option value="CompensaciÃ³n a propietario">CompensaciÃ³n a propietario</option>
               <option value="Impuestos">Impuestos</option>
               <option value="Gastos operativos">Gastos operativos</option>
               <option value="Remesa">Remesa</option>
-              <option value="Capital o préstamos">Capital o préstamos</option>
+              <option value="Capital o prÃ©stamos">Capital o prÃ©stamos</option>
             </select>
           </div>
           <div class="col-3">
-            <label for="fMetodo">Método</label>
+            <label for="fMetodo">MÃ©todo</label>
             <select id="fMetodo">
               <option value="">Todos</option>
               <option value="Efectivo">Efectivo</option>
@@ -804,22 +807,22 @@
             </select>
           </div>
           <div class="col-6">
-            <label for="fQ">Buscar por descripción</label>
-            <input id="fQ" type="text" placeholder="Escribe parte de la descripción..." />
+            <label for="fQ">Buscar por descripciÃ³n</label>
+            <input id="fQ" type="text" placeholder="Escribe parte de la descripciÃ³n..." />
           </div>
 
           <div class="col-3">
             <label for="fPeriodo">Periodo</label>
             <select id="fPeriodo">
               <option value="">Todos</option>
-              <option value="dia">Día</option>
+              <option value="dia">DÃ­a</option>
               <option value="semana">Semana</option>
               <option value="mes">Mes</option>
               <option value="rango">Rango</option>
             </select>
           </div>
           <div class="col-3" id="wrapDia" style="display:none">
-            <label for="fDia">Día</label>
+            <label for="fDia">DÃ­a</label>
             <input id="fDia" type="date" />
           </div>
           <div class="col-3" id="wrapSemana" style="display:none">
@@ -848,8 +851,8 @@
             <tr>
               <th>ID</th>
               <th>Fecha/Hora</th>
-              <th>Descripción</th>
-              <th>Método</th>
+              <th>DescripciÃ³n</th>
+              <th>MÃ©todo</th>
               <th>Banco</th>
               <th>Tipo</th>
               <th class="t-right">Monto (USD)</th>
@@ -862,10 +865,10 @@
     </div>
   </dialog>
 
-  <!-- MODAL: Estadísticas -->
+  <!-- MODAL: EstadÃ­sticas -->
   <dialog id="dlgEstadisticas">
     <div class="modal-header">
-      <h3>Estadística financiera</h3>
+      <h3>EstadÃ­stica financiera</h3>
       <button class="close-x" id="closeEstadisticas">Cerrar</button>
     </div>
     <div class="modal-body">
@@ -900,7 +903,7 @@
           <div class="stats-chart-card">
             <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:8px">
               <div>
-                <div style="font-size:12px;color:#94a3b8">Distribución del período</div>
+                <div style="font-size:12px;color:#94a3b8">DistribuciÃ³n del perÃ­odo</div>
                 <div id="statsTituloPeriodo" style="font-weight:700">Mes actual</div>
               </div>
               <div id="statsCantidad" style="font-size:12px;color:#94a3b8">0 movimientos</div>
@@ -916,17 +919,17 @@
               <div class="stats-mini">
                 <h4>Entradas</h4>
                 <div class="value" id="statsEntradas">$0.00</div>
-                <div class="note">Todo lo que ingresó</div>
+                <div class="note">Todo lo que ingresÃ³</div>
               </div>
               <div class="stats-mini">
                 <h4>Salidas</h4>
                 <div class="value" id="statsSalidas">$0.00</div>
-                <div class="note">Todo lo que salió</div>
+                <div class="note">Todo lo que saliÃ³</div>
               </div>
               <div class="stats-mini">
                 <h4>Disponible</h4>
                 <div class="value" id="statsResultado">$0.00</div>
-                <div class="note">Entradas − salidas</div>
+                <div class="note">Entradas âˆ’ salidas</div>
               </div>
               <div class="stats-mini">
                 <h4>Margen</h4>
@@ -939,7 +942,7 @@
                 <div class="note">Pagos especiales de ganancia</div>
               </div>
               <div class="stats-mini">
-                <h4>Compensación a propietario</h4>
+                <h4>CompensaciÃ³n a propietario</h4>
                 <div class="value" id="statsCompensacionEspecial">$0.00</div>
                 <div class="note">Compensaciones registradas</div>
               </div>
@@ -969,7 +972,7 @@
   <!-- MODAL: Editar -->
   <dialog id="dlgEditar">
     <form method="dialog" id="formEditar">
-      <h3>Editar transacción</h3>
+      <h3>Editar transacciÃ³n</h3>
       <input type="hidden" id="editId" />
       <div style="display:grid;gap:10px;margin-top:10px">
         <div>
@@ -977,11 +980,11 @@
           <input id="editFecha" type="datetime-local" />
         </div>
         <div id="editDescGroup">
-          <label for="editDesc">Descripción</label>
+          <label for="editDesc">DescripciÃ³n</label>
           <input id="editDesc" type="text" />
         </div>
         <div>
-          <label for="editMetodo">Método</label>
+          <label for="editMetodo">MÃ©todo</label>
           <select id="editMetodo">
             <option value="Efectivo">Efectivo</option>
             <option value="Transferencia">Transferencia</option>
@@ -990,7 +993,7 @@
         <div id="editBankWrap">
           <label for="editBanco">Banco</label>
           <select id="editBanco">
-            <option value="Agrícola">Banco Agrícola</option>
+            <option value="AgrÃ­cola">Banco AgrÃ­cola</option>
             <option value="BAC">BAC Credomatic</option>
             <option value="Otros">Otros</option>
           </select>
@@ -1005,15 +1008,15 @@
             <option value="Entrada">Entrada</option>
             <option value="Salida">Salida</option>
             <option value="Pagos especiales">Pagos especiales</option>
-            <option value="Capital o préstamos">Capital o préstamos</option>
+            <option value="Capital o prÃ©stamos">Capital o prÃ©stamos</option>
           </select>
         </div>
         <div id="editSpecialPaymentWrap" style="display:none">
-          <label for="editPagoEspecial">Categoría de pago especial</label>
+          <label for="editPagoEspecial">CategorÃ­a de pago especial</label>
           <select id="editPagoEspecial">
-            <option value="">Selecciona una opción</option>
+            <option value="">Selecciona una opciÃ³n</option>
             <option value="Ganancia">Ganancia</option>
-            <option value="Compensación a propietario">Compensación a propietario</option>
+            <option value="CompensaciÃ³n a propietario">CompensaciÃ³n a propietario</option>
             <option value="Impuestos">Impuestos</option>
             <option value="Gastos operativos">Gastos operativos</option>
             <option value="Remesa">Remesa</option>
@@ -1058,8 +1061,8 @@
         <div class="help">Este ticket es independiente del registro de caja. No modifica saldos ni transacciones.</div>
         <div class="paste-ticket-box">
           <label for="txtPegarTicket">Pegar desde Excel / Sheets</label>
-          <textarea id="txtPegarTicket" placeholder="Pega aquí columnas en este orden: Descripción, Cantidad, Precio, Total.&#10;Ejemplo:&#10;Diagnóstico electrónico&#9;1&#9;45&#9;45&#10;Cambio de bujías&#9;4&#9;6.50&#9;26"></textarea>
-          <div class="help">Acepta datos copiados directamente desde Excel, separados por tabulaciones. También acepta comas o punto y coma si vienen de un CSV.</div>
+          <textarea id="txtPegarTicket" placeholder="Pega aquÃ­ columnas en este orden: DescripciÃ³n, Cantidad, Precio, Total.&#10;Ejemplo:&#10;DiagnÃ³stico electrÃ³nico&#9;1&#9;45&#9;45&#10;Cambio de bujÃ­as&#9;4&#9;6.50&#9;26"></textarea>
+          <div class="help">Acepta datos copiados directamente desde Excel, separados por tabulaciones. TambiÃ©n acepta comas o punto y coma si vienen de un CSV.</div>
           <div class="paste-ticket-actions">
             <button id="btnPegarTicketMasivo" class="btn-primary" type="button">Cargar datos pegados</button>
             <button id="btnLimpiarPegadoTicket" class="btn-outline" type="button">Limpiar pegado</button>
@@ -1070,18 +1073,18 @@
           <table class="ticket-items" id="tablaEmitirTicket">
             <thead>
               <tr>
-                <th style="width:42%">Descripción</th>
+                <th style="width:42%">DescripciÃ³n</th>
                 <th style="width:14%">Cantidad</th>
                 <th style="width:18%">Precio</th>
                 <th style="width:18%">Total</th>
-                <th style="width:8%">Acción</th>
+                <th style="width:8%">AcciÃ³n</th>
               </tr>
             </thead>
             <tbody></tbody>
           </table>
         </div>
         <div class="ticket-actions">
-          <button id="btnAgregarLineaTicket" class="btn-outline" type="button">Agregar línea</button>
+          <button id="btnAgregarLineaTicket" class="btn-outline" type="button">Agregar lÃ­nea</button>
           <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;justify-content:flex-end">
             <div class="ticket-total-box">Total: <span id="totalEmitirTicket">$0.00</span></div>
             <button id="btnImprimirTicketManual" class="btn-primary" type="button">Imprimir ticket</button>
@@ -1089,16 +1092,16 @@
         </div>
         <div id="panelTransaccionTicket" class="ticket-tx-panel">
           <div class="ticket-tx-question" id="bloquePreguntaTransaccionTicket">
-            <strong>¿Desea ejecutar la transacción?</strong>
+            <strong>Â¿Desea ejecutar la transacciÃ³n?</strong>
             <div class="ticket-tx-options">
-              <button id="btnTicketTxSi" class="btn-primary" type="button">Sí</button>
+              <button id="btnTicketTxSi" class="btn-primary" type="button">SÃ­</button>
               <button id="btnTicketTxNo" class="btn-outline" type="button">No, solo imprimir ticket</button>
             </div>
           </div>
           <div class="ticket-tx-form" id="formTransaccionTicket">
             <div class="ticket-tx-grid">
               <div class="tx-col-4">
-                <label for="ticketTxMetodo">Método</label>
+                <label for="ticketTxMetodo">MÃ©todo</label>
                 <select id="ticketTxMetodo">
                   <option value="Efectivo">Efectivo</option>
                   <option value="Transferencia">Transferencia</option>
@@ -1107,7 +1110,7 @@
               <div class="tx-col-4" id="ticketTxBancoWrap" style="display:none">
                 <label for="ticketTxBanco">Banco</label>
                 <select id="ticketTxBanco">
-                  <option value="Agrícola">Banco Agrícola</option>
+                  <option value="AgrÃ­cola">Banco AgrÃ­cola</option>
                   <option value="BAC">BAC Credomatic</option>
                   <option value="Otros">Otros</option>
                 </select>
@@ -1121,7 +1124,7 @@
                 <input id="ticketTxTipo" type="text" value="Entrada de dinero" readonly />
               </div>
               <div class="tx-col-12">
-                <label for="ticketTxDesc">Descripción breve</label>
+                <label for="ticketTxDesc">DescripciÃ³n breve</label>
                 <input id="ticketTxDesc" type="text" placeholder="Ej. Ingreso por ticket emitido" autocomplete="off" />
               </div>
               <div class="tx-col-4">
@@ -1129,10 +1132,10 @@
                 <input id="ticketTxMonto" type="number" min="0" step="0.01" placeholder="0.00" />
               </div>
             </div>
-            <div class="help" style="margin-top:8px">El monto se rellena con el total del ticket, pero podés modificarlo antes de registrar.</div>
+            <div class="help" style="margin-top:8px">El monto se rellena con el total del ticket, pero podÃ©s modificarlo antes de registrar.</div>
             <div class="ticket-tx-actions">
               <button id="btnCancelarTxTicket" class="btn-outline" type="button">Cancelar</button>
-              <button id="btnFinalizarTxTicket" class="btn-primary" type="button">Finalizar transacción e imprimir</button>
+              <button id="btnFinalizarTxTicket" class="btn-primary" type="button">Finalizar transacciÃ³n e imprimir</button>
             </div>
           </div>
         </div>
@@ -1160,17 +1163,17 @@
             <h4 style="margin:0 0 10px">Nueva cuenta de cliente</h4>
             <div class="cxc-grid">
               <div class="cxc-col-12"><label for="cxcCliente">Cliente</label><input id="cxcCliente" type="text" placeholder="Nombre del cliente"></div>
-              <div class="cxc-col-6"><label for="cxcTelefono">Teléfono</label><input id="cxcTelefono" type="text" placeholder="Opcional"></div>
-              <div class="cxc-col-6"><label for="cxcVehiculo">Vehículo</label><input id="cxcVehiculo" type="text" placeholder="Opcional"></div>
-              <div class="cxc-col-12"><label for="cxcDetalle">Detalle de la cuenta</label><textarea id="cxcDetalle" placeholder="Ej. Reparación pendiente de pago, factura, orden de trabajo..."></textarea></div>
+              <div class="cxc-col-6"><label for="cxcTelefono">TelÃ©fono</label><input id="cxcTelefono" type="text" placeholder="Opcional"></div>
+              <div class="cxc-col-6"><label for="cxcVehiculo">VehÃ­culo</label><input id="cxcVehiculo" type="text" placeholder="Opcional"></div>
+              <div class="cxc-col-12"><label for="cxcDetalle">Detalle de la cuenta</label><textarea id="cxcDetalle" placeholder="Ej. ReparaciÃ³n pendiente de pago, factura, orden de trabajo..."></textarea></div>
               <div class="cxc-col-6"><label for="cxcMontoTotal">Total de la cuenta</label><input id="cxcMontoTotal" type="number" min="0" step="0.01" placeholder="0.00"></div>
-              <div class="cxc-col-6"><label for="cxcFechaLimite">Fecha límite</label><input id="cxcFechaLimite" type="date"></div>
+              <div class="cxc-col-6"><label for="cxcFechaLimite">Fecha lÃ­mite</label><input id="cxcFechaLimite" type="date"></div>
               <div class="cxc-col-12"><button id="btnCxcCrearCuenta" class="btn-primary" type="button" style="width:100%">Crear cuenta</button></div>
             </div>
           </div>
           <div class="cxc-card cxc-main">
             <div class="cxc-toolbar">
-              <div style="min-width:240px;flex:1"><label for="cxcBuscar">Buscar</label><input id="cxcBuscar" type="text" placeholder="Cliente, teléfono, vehículo o detalle"></div>
+              <div style="min-width:240px;flex:1"><label for="cxcBuscar">Buscar</label><input id="cxcBuscar" type="text" placeholder="Cliente, telÃ©fono, vehÃ­culo o detalle"></div>
               <div style="width:190px"><label for="cxcFiltroEstado">Estado</label><select id="cxcFiltroEstado"><option value="todas">Todas</option><option value="abiertas">Abiertas</option><option value="saldadas">Saldadas</option></select></div>
             </div>
             <div class="cxc-table-wrap">
@@ -1184,8 +1187,8 @@
               <input type="hidden" id="cxcCuentaId">
               <div class="cxc-grid">
                 <div class="cxc-col-4"><label for="cxcAbonoMonto">Monto del abono</label><input id="cxcAbonoMonto" type="number" min="0" step="0.01" placeholder="0.00"></div>
-                <div class="cxc-col-4"><label for="cxcAbonoMetodo">Método</label><select id="cxcAbonoMetodo"><option value="Efectivo">Efectivo</option><option value="Transferencia">Transferencia</option></select></div>
-                <div class="cxc-col-4" id="cxcAbonoBancoWrap" style="display:none"><label for="cxcAbonoBanco">Banco</label><select id="cxcAbonoBanco"><option value="Agrícola">Banco Agrícola</option><option value="BAC">BAC Credomatic</option><option value="Otros">Otros</option></select></div>
+                <div class="cxc-col-4"><label for="cxcAbonoMetodo">MÃ©todo</label><select id="cxcAbonoMetodo"><option value="Efectivo">Efectivo</option><option value="Transferencia">Transferencia</option></select></div>
+                <div class="cxc-col-4" id="cxcAbonoBancoWrap" style="display:none"><label for="cxcAbonoBanco">Banco</label><select id="cxcAbonoBanco"><option value="AgrÃ­cola">Banco AgrÃ­cola</option><option value="BAC">BAC Credomatic</option><option value="Otros">Otros</option></select></div>
                 <div class="cxc-col-4" id="cxcAbonoOtroBancoWrap" style="display:none"><label for="cxcAbonoOtroBanco">Banco / financiera</label><input id="cxcAbonoOtroBanco" type="text" placeholder="Nombre"></div>
                 <div class="cxc-col-12"><label for="cxcAbonoNota">Nota del abono</label><input id="cxcAbonoNota" type="text" placeholder="Opcional"></div>
                 <div class="cxc-col-12" style="display:flex;gap:10px;justify-content:flex-end;flex-wrap:wrap"><button id="btnCxcCancelarAbono" class="btn-outline" type="button">Cancelar</button><button id="btnCxcRegistrarAbono" class="btn-primary" type="button">Registrar abono</button></div>
@@ -1213,11 +1216,11 @@
             <input id="cxcEditCliente" type="text" placeholder="Nombre del cliente">
           </div>
           <div class="cxc-edit-col-6">
-            <label for="cxcEditTelefono">Teléfono / WhatsApp</label>
+            <label for="cxcEditTelefono">TelÃ©fono / WhatsApp</label>
             <input id="cxcEditTelefono" type="text" placeholder="Ej. 71660867">
           </div>
           <div class="cxc-edit-col-6">
-            <label for="cxcEditVehiculo">Vehículo</label>
+            <label for="cxcEditVehiculo">VehÃ­culo</label>
             <input id="cxcEditVehiculo" type="text" placeholder="Opcional">
           </div>
           <div class="cxc-edit-col-12">
@@ -1230,11 +1233,11 @@
             <div class="help">No puede quedar menor que el total ya abonado.</div>
           </div>
           <div class="cxc-edit-col-6">
-            <label for="cxcEditFechaLimite">Fecha límite</label>
+            <label for="cxcEditFechaLimite">Fecha lÃ­mite</label>
             <input id="cxcEditFechaLimite" type="date">
           </div>
-          <div class="cxc-edit-col-6"><label for="cxcEditFechaCreacion">Fecha de creación de la deuda</label><input id="cxcEditFechaCreacion" type="date"></div>
-          <div class="cxc-edit-col-6"><label for="cxcEditHoraCreacion">Hora de creación de la deuda</label><input id="cxcEditHoraCreacion" type="time"></div>
+          <div class="cxc-edit-col-6"><label for="cxcEditFechaCreacion">Fecha de creaciÃ³n de la deuda</label><input id="cxcEditFechaCreacion" type="date"></div>
+          <div class="cxc-edit-col-6"><label for="cxcEditHoraCreacion">Hora de creaciÃ³n de la deuda</label><input id="cxcEditHoraCreacion" type="time"></div>
         </div>
         <div class="cxc-edit-actions">
           <button id="btnCxcCancelarEdit" class="btn-outline" type="button">Cancelar</button>
@@ -1253,11 +1256,11 @@
         <div class="cxc-edit-col-6"><label for="cxcEditAbonoFecha">Fecha del abono</label><input id="cxcEditAbonoFecha" type="date"></div>
         <div class="cxc-edit-col-6"><label for="cxcEditAbonoHora">Hora del abono</label><input id="cxcEditAbonoHora" type="time"></div>
         <div class="cxc-edit-col-6"><label for="cxcEditAbonoMonto">Monto</label><input id="cxcEditAbonoMonto" type="number" min="0" step="0.01"></div>
-        <div class="cxc-edit-col-6"><label for="cxcEditAbonoMetodo">Método</label><select id="cxcEditAbonoMetodo"><option value="Efectivo">Efectivo</option><option value="Transferencia">Transferencia</option></select></div>
+        <div class="cxc-edit-col-6"><label for="cxcEditAbonoMetodo">MÃ©todo</label><select id="cxcEditAbonoMetodo"><option value="Efectivo">Efectivo</option><option value="Transferencia">Transferencia</option></select></div>
         <div class="cxc-edit-col-6" id="cxcEditAbonoBancoWrap"><label for="cxcEditAbonoBanco">Banco</label><input id="cxcEditAbonoBanco" type="text" placeholder="Banco o financiera"></div>
         <div class="cxc-edit-col-12"><label for="cxcEditAbonoNota">Nota</label><input id="cxcEditAbonoNota" type="text" placeholder="Opcional"></div>
       </div>
-      <div class="help" style="margin-top:10px">Al guardar, también se actualizará la entrada correspondiente en Caja.</div>
+      <div class="help" style="margin-top:10px">Al guardar, tambiÃ©n se actualizarÃ¡ la entrada correspondiente en Caja.</div>
       <div class="cxc-edit-actions"><button id="btnCxcCancelarEditAbono" class="btn-outline" type="button">Cancelar</button><button id="btnCxcGuardarEditAbono" class="btn-primary" type="button">Guardar cambios</button></div>
     </div></div>
   </dialog>
@@ -1281,9 +1284,9 @@
 
 
 
-  <!-- MODAL: Proveedores / facturas a crédito -->
+  <!-- MODAL: Proveedores / facturas a crÃ©dito -->
   <dialog id="dlgProveedores">
-    <div class="modal-header"><h3>Proveedores - Facturas a crédito</h3><button class="close-x" id="closeProveedores">Cerrar</button></div>
+    <div class="modal-header"><h3>Proveedores - Facturas a crÃ©dito</h3><button class="close-x" id="closeProveedores">Cerrar</button></div>
     <div class="modal-body"><div class="modal-inner">
       <div class="prov-layout">
         <div class="prov-card prov-side">
@@ -1292,28 +1295,28 @@
           <h4 style="margin:14px 0 10px">Registrar factura</h4>
           <div class="prov-grid">
             <div class="prov-col-12"><label for="provDte">DTE / Identificador de factura</label><input id="provDte" type="text" placeholder="Ej. DTE-001 / factura"></div>
-            <div class="prov-col-6"><label for="provFechaEmision">Fecha de emisión</label><input id="provFechaEmision" type="date"></div>
+            <div class="prov-col-6"><label for="provFechaEmision">Fecha de emisiÃ³n</label><input id="provFechaEmision" type="date"></div>
             <div class="prov-col-6"><label for="provEmpresaForm">Empresa</label><select id="provEmpresaForm"><option>Econoparts</option><option>Impresa</option><option>Superrepuesto</option><option>La Casa del Repuesto</option><option>REFRACSA</option></select></div>
-            <div class="prov-col-12"><label for="provDescripcion">Descripción</label><textarea id="provDescripcion" placeholder="Detalle de la factura, repuestos, orden, etc."></textarea></div>
+            <div class="prov-col-12"><label for="provDescripcion">DescripciÃ³n</label><textarea id="provDescripcion" placeholder="Detalle de la factura, repuestos, orden, etc."></textarea></div>
             <div class="prov-col-6"><label for="provMonto">Monto</label><input id="provMonto" type="number" min="0" step="0.01" placeholder="0.00"></div>
             <div class="prov-col-6"><label for="provEstado">Estado</label><select id="provEstado"><option value="Pendiente">Pendiente de cancelar</option><option value="Cancelada">Cancelada</option></select></div>
-            <div class="prov-col-6" id="provFechaCancelacionWrap" style="display:none"><label for="provFechaCancelacion">Fecha de cancelación</label><input id="provFechaCancelacion" type="date"></div>
-            <div class="prov-col-6" id="provHoraCancelacionWrap" style="display:none"><label for="provHoraCancelacion">Hora de cancelación</label><input id="provHoraCancelacion" type="time"></div>
+            <div class="prov-col-6" id="provFechaCancelacionWrap" style="display:none"><label for="provFechaCancelacion">Fecha de cancelaciÃ³n</label><input id="provFechaCancelacion" type="date"></div>
+            <div class="prov-col-6" id="provHoraCancelacionWrap" style="display:none"><label for="provHoraCancelacion">Hora de cancelaciÃ³n</label><input id="provHoraCancelacion" type="time"></div>
             <div class="prov-col-12"><button id="btnProvGuardarFactura" class="btn-primary" type="button" style="width:100%">Guardar factura</button></div>
           </div>
         </div>
         <div class="prov-card prov-main">
           <div class="prov-toolbar"><div><div style="font-size:12px;color:#94a3b8">Vista actual</div><div id="provEmpresaTitulo" style="font-size:22px;font-weight:800">Todas las empresas</div></div><div class="prov-filters"><div class="prov-date-filter"><label for="provFiltroFecha">Fecha de emision</label><select id="provFiltroFecha"><option value="Todas">Todas las fechas</option><option value="Hoy">Hoy</option><option value="Semana">Esta semana</option><option value="MesActual">Este mes</option><option value="MesElegido">Elegir mes</option><option value="Rango">Rango</option></select><input id="provFiltroMes" type="month" style="display:none"><div id="provFiltroRango" class="prov-date-range" style="display:none"><input id="provFechaDesde" type="date"><input id="provFechaHasta" type="date"></div></div><div><label for="provBuscar">Buscar</label><input id="provBuscar" type="text" placeholder="DTE, empresa, descripcion o monto"></div><div><label for="provFiltroEstado">Estado</label><select id="provFiltroEstado"><option value="Pendiente">Pendientes</option><option value="Todas">Todas</option><option value="Cancelada">Canceladas</option></select></div></div></div>
           <div class="prov-table-wrap"><table class="prov-table" id="tablaProveedores"><thead><tr><th><input type="checkbox" id="provChkAll"></th><th>DTE</th><th>Empresa</th><th>Emision</th><th>Descripcion</th><th>Monto / Estado</th><th>Cancelacion</th><th>Acciones</th></tr></thead><tbody></tbody></table></div>
-          <div class="prov-paybar"><div>Seleccionadas pendientes: <span id="provSeleccionadas">0</span> · Total: <span class="prov-selected-total" id="provTotalSeleccionado">$0.00</span></div><button id="btnProvPagarSeleccionadas" class="btn-primary" type="button">Pagar seleccionadas</button></div>
+          <div class="prov-paybar"><div>Seleccionadas pendientes: <span id="provSeleccionadas">0</span> Â· Total: <span class="prov-selected-total" id="provTotalSeleccionado">$0.00</span></div><button id="btnProvPagarSeleccionadas" class="btn-primary" type="button">Pagar seleccionadas</button></div>
         </div>
       </div>
     </div></div>
   </dialog>
-  <dialog id="dlgEditarFacturaProveedor"><div class="modal-header"><h3>Editar factura de proveedor</h3><button class="close-x" id="closeEditarFacturaProveedor">Cerrar</button></div><div class="modal-body"><div class="modal-inner"><input type="hidden" id="provEditId"><div class="prov-grid"><div class="prov-col-6"><label for="provEditDte">DTE / Identificador</label><input id="provEditDte" type="text"></div><div class="prov-col-6"><label for="provEditEmpresa">Empresa</label><select id="provEditEmpresa"><option>Econoparts</option><option>Impresa</option><option>Superrepuesto</option><option>La Casa del Repuesto</option><option>REFRACSA</option></select></div><div class="prov-col-6"><label for="provEditFechaEmision">Fecha de emisión</label><input id="provEditFechaEmision" type="date"></div><div class="prov-col-6"><label for="provEditMonto">Monto</label><input id="provEditMonto" type="number" min="0" step="0.01"></div><div class="prov-col-12"><label for="provEditDescripcion">Descripción</label><textarea id="provEditDescripcion"></textarea></div><div class="prov-col-4"><label for="provEditEstado">Estado</label><select id="provEditEstado"><option value="Pendiente">Pendiente de cancelar</option><option value="Cancelada">Cancelada</option></select></div><div class="prov-col-4" id="provEditFechaCancelacionWrap"><label for="provEditFechaCancelacion">Fecha de cancelación</label><input id="provEditFechaCancelacion" type="date"></div><div class="prov-col-4" id="provEditHoraCancelacionWrap"><label for="provEditHoraCancelacion">Hora de cancelación</label><input id="provEditHoraCancelacion" type="time"></div></div><div class="prov-edit-actions"><button id="btnProvCancelarEdit" class="btn-outline" type="button">Cancelar</button><button id="btnProvGuardarEdit" class="btn-primary" type="button">Guardar cambios</button></div></div></div></dialog>
-  <dialog id="dlgPagarFacturasProveedor"><div class="modal-header"><h3>Pagar facturas seleccionadas</h3><button class="close-x" id="closePagarFacturasProveedor">Cerrar</button></div><div class="modal-body"><div class="modal-inner"><div id="provPagoResumen" class="help" style="margin-bottom:12px"></div><div class="prov-grid"><div class="prov-col-6"><label for="provPagoFecha">Fecha de cancelación</label><input id="provPagoFecha" type="date"></div><div class="prov-col-6"><label for="provPagoHora">Hora de cancelación</label><input id="provPagoHora" type="time"></div><div class="prov-col-6"><label for="provPagoMetodo">Método para la transacción</label><select id="provPagoMetodo"><option value="Efectivo">Efectivo</option><option value="Transferencia">Transferencia</option></select></div><div class="prov-col-6" id="provPagoBancoWrap" style="display:none"><label for="provPagoBanco">Banco</label><select id="provPagoBanco"><option value="Agrícola">Banco Agrícola</option><option value="BAC">BAC Credomatic</option><option value="Otros">Otros</option></select></div><div class="prov-col-6" id="provPagoOtroBancoWrap" style="display:none"><label for="provPagoOtroBanco">Nombre del banco o financiera</label><input id="provPagoOtroBanco" type="text" placeholder="Escribe el nombre"></div></div><div class="help" style="margin-top:10px">Al confirmar, las facturas quedarán canceladas y se registrará una sola salida en el módulo principal de caja por el total seleccionado.</div><div class="prov-pay-actions"><button id="btnProvCancelarPago" class="btn-outline" type="button">Cancelar</button><button id="btnProvConfirmarPago" class="btn-primary" type="button">Confirmar pago y registrar salida</button></div></div></div></dialog>
+  <dialog id="dlgEditarFacturaProveedor"><div class="modal-header"><h3>Editar factura de proveedor</h3><button class="close-x" id="closeEditarFacturaProveedor">Cerrar</button></div><div class="modal-body"><div class="modal-inner"><input type="hidden" id="provEditId"><div class="prov-grid"><div class="prov-col-6"><label for="provEditDte">DTE / Identificador</label><input id="provEditDte" type="text"></div><div class="prov-col-6"><label for="provEditEmpresa">Empresa</label><select id="provEditEmpresa"><option>Econoparts</option><option>Impresa</option><option>Superrepuesto</option><option>La Casa del Repuesto</option><option>REFRACSA</option></select></div><div class="prov-col-6"><label for="provEditFechaEmision">Fecha de emisiÃ³n</label><input id="provEditFechaEmision" type="date"></div><div class="prov-col-6"><label for="provEditMonto">Monto</label><input id="provEditMonto" type="number" min="0" step="0.01"></div><div class="prov-col-12"><label for="provEditDescripcion">DescripciÃ³n</label><textarea id="provEditDescripcion"></textarea></div><div class="prov-col-4"><label for="provEditEstado">Estado</label><select id="provEditEstado"><option value="Pendiente">Pendiente de cancelar</option><option value="Cancelada">Cancelada</option></select></div><div class="prov-col-4" id="provEditFechaCancelacionWrap"><label for="provEditFechaCancelacion">Fecha de cancelaciÃ³n</label><input id="provEditFechaCancelacion" type="date"></div><div class="prov-col-4" id="provEditHoraCancelacionWrap"><label for="provEditHoraCancelacion">Hora de cancelaciÃ³n</label><input id="provEditHoraCancelacion" type="time"></div></div><div class="prov-edit-actions"><button id="btnProvCancelarEdit" class="btn-outline" type="button">Cancelar</button><button id="btnProvGuardarEdit" class="btn-primary" type="button">Guardar cambios</button></div></div></div></dialog>
+  <dialog id="dlgPagarFacturasProveedor"><div class="modal-header"><h3>Pagar facturas seleccionadas</h3><button class="close-x" id="closePagarFacturasProveedor">Cerrar</button></div><div class="modal-body"><div class="modal-inner"><div id="provPagoResumen" class="help" style="margin-bottom:12px"></div><div class="prov-grid"><div class="prov-col-6"><label for="provPagoFecha">Fecha de cancelaciÃ³n</label><input id="provPagoFecha" type="date"></div><div class="prov-col-6"><label for="provPagoHora">Hora de cancelaciÃ³n</label><input id="provPagoHora" type="time"></div><div class="prov-col-6"><label for="provPagoMetodo">MÃ©todo para la transacciÃ³n</label><select id="provPagoMetodo"><option value="Efectivo">Efectivo</option><option value="Transferencia">Transferencia</option></select></div><div class="prov-col-6" id="provPagoBancoWrap" style="display:none"><label for="provPagoBanco">Banco</label><select id="provPagoBanco"><option value="AgrÃ­cola">Banco AgrÃ­cola</option><option value="BAC">BAC Credomatic</option><option value="Otros">Otros</option></select></div><div class="prov-col-6" id="provPagoOtroBancoWrap" style="display:none"><label for="provPagoOtroBanco">Nombre del banco o financiera</label><input id="provPagoOtroBanco" type="text" placeholder="Escribe el nombre"></div></div><div class="help" style="margin-top:10px">Al confirmar, las facturas quedarÃ¡n canceladas y se registrarÃ¡ una sola salida en el mÃ³dulo principal de caja por el total seleccionado.</div><div class="prov-pay-actions"><button id="btnProvCancelarPago" class="btn-outline" type="button">Cancelar</button><button id="btnProvConfirmarPago" class="btn-primary" type="button">Confirmar pago y registrar salida</button></div></div></div></dialog>
 
-  <!-- Área de impresión -->
+  <!-- Ãrea de impresiÃ³n -->
   <div id="printArea">
     <div class="ticket" id="ticket"></div>
   </div>
@@ -1457,7 +1460,7 @@ function toggleCashFields(){
     return category === 'Gastos operativos' || category === 'Remesa';
   }
   function specialPaymentUsesAutoCalc(category){
-    return category === 'Ganancia' || category === 'Compensación a propietario';
+    return category === 'Ganancia' || category === 'CompensaciÃ³n a propietario';
   }
 
   function isTipoEntrada(value){
@@ -1480,7 +1483,7 @@ function toggleCashFields(){
 
   function isTipoCapitalPrestamo(value){
     const raw = String(value || '').trim().toLowerCase();
-    return raw === 'capital o préstamos' || raw === 'capital o prestamos';
+    return raw === 'capital o prÃ©stamos' || raw === 'capital o prestamos';
   }
 
   function normalizeSimpleText(value){
@@ -1515,7 +1518,7 @@ function toggleCashFields(){
       return `<span class="pill" style="background:rgba(245,158,11,.16);color:#fde68a;border:1px solid rgba(245,158,11,.34)">${label}</span>`;
     }
     if(isTipoCapitalPrestamo(r.tipo)){
-      return '<span class="pill" style="background:rgba(59,130,246,.16);color:#bfdbfe;border:1px solid rgba(59,130,246,.34)">Capital o préstamos</span>';
+      return '<span class="pill" style="background:rgba(59,130,246,.16);color:#bfdbfe;border:1px solid rgba(59,130,246,.34)">Capital o prÃ©stamos</span>';
     }
     if(isTipoEntrada(r.tipo)) return '<span class="pill in">Entrada</span>';
     return '<span class="pill out">Salida</span>';
@@ -1539,9 +1542,9 @@ function toggleCashFields(){
     if(typeof value === 'string'){
       const raw = value.trim();
 
-      // Mantener la misma lógica práctica del filtro de control:
+      // Mantener la misma lÃ³gica prÃ¡ctica del filtro de control:
       // si ya viene como YYYY-MM-DD o YYYY-MM-DDTHH:mm:ss, se toma la parte de fecha TAL CUAL,
-      // sin convertir zona horaria porque eso mueve el día y rompe el rango.
+      // sin convertir zona horaria porque eso mueve el dÃ­a y rompe el rango.
       if(/^\d{4}-\d{2}-\d{2}$/.test(raw)) return raw.slice(0,10);
       if(/^\d{4}-\d{2}-\d{2}[T\s]/.test(raw)) return raw.slice(0,10);
 
@@ -1746,15 +1749,15 @@ function toggleCashFields(){
 function validate(){
     const desc = els.desc.value.trim(); const metodo = els.metodo.value; const tipo = els.tipo.value; const monto = parseFloat(els.monto.value);
     const requiereDescripcion = tipo!=='Pagos especiales' || specialPaymentNeedsDescription(els.pagoEspecial.value);
-    if(requiereDescripcion && !desc) return {ok:false,msg:'Ingresa la descripción.'};
-    if(!['Efectivo','Transferencia'].includes(metodo)) return {ok:false,msg:'Selecciona un método válido.'};
-    if(!['Entrada','Salida','Pagos especiales','Capital o préstamos'].includes(tipo)) return {ok:false,msg:'Selecciona el tipo de operación.'};
-    if(tipo==='Pagos especiales' && !els.pagoEspecial.value) return {ok:false,msg:'Selecciona la categoría de pago especial.'};
+    if(requiereDescripcion && !desc) return {ok:false,msg:'Ingresa la descripciÃ³n.'};
+    if(!['Efectivo','Transferencia'].includes(metodo)) return {ok:false,msg:'Selecciona un mÃ©todo vÃ¡lido.'};
+    if(!['Entrada','Salida','Pagos especiales','Capital o prÃ©stamos'].includes(tipo)) return {ok:false,msg:'Selecciona el tipo de operaciÃ³n.'};
+    if(tipo==='Pagos especiales' && !els.pagoEspecial.value) return {ok:false,msg:'Selecciona la categorÃ­a de pago especial.'};
     if(tipo==='Pagos especiales' && specialPaymentUsesAutoCalc(els.pagoEspecial.value)){
       const porcentaje = parseFloat(els.porcentajeEspecial?.value);
-      if(Number.isNaN(porcentaje) || porcentaje<=0) return {ok:false,msg:'Ingresa un porcentaje válido.'};
+      if(Number.isNaN(porcentaje) || porcentaje<=0) return {ok:false,msg:'Ingresa un porcentaje vÃ¡lido.'};
       if(!els.rangoEspecialDesde?.value || !els.rangoEspecialHasta?.value) return {ok:false,msg:'Selecciona el rango de fechas.'};
-      if(els.rangoEspecialDesde.value > els.rangoEspecialHasta.value) return {ok:false,msg:'El rango de fechas no es válido.'};
+      if(els.rangoEspecialDesde.value > els.rangoEspecialHasta.value) return {ok:false,msg:'El rango de fechas no es vÃ¡lido.'};
     }
     if(Number.isNaN(monto)||monto<=0) return {ok:false,msg:'Ingresa un monto mayor a 0.'};
     if(metodo==='Efectivo' && tipo==='Entrada'){
@@ -1777,17 +1780,17 @@ function printReceipt(record){
     <div class="ticket">
       <header>
         <h1 style="margin:0;font-size:14px">AUTOMOTRIZ MEDINA SV</h1>
-        <p style="margin:2px 0 0 0;font-size:11px">Especialistas en Diagnóstico Electrónico</p>
-        <p style="margin:2px 0 0 0;font-size:11px">Ruta Militar, 100 m al oriente del Puente Urbina, San Miguel · WhatsApp 7166-0867</p>
+        <p style="margin:2px 0 0 0;font-size:11px">Especialistas en DiagnÃ³stico ElectrÃ³nico</p>
+        <p style="margin:2px 0 0 0;font-size:11px">Ruta Militar, 100 m al oriente del Puente Urbina, San Miguel Â· WhatsApp 7166-0867</p>
       </header>
       <div class="meta" style="font-size:11px;margin:6px 0">
-        Fecha/Hora: ${fmtTS(record.ts)} ·
-        No. Transacción: ${record.id} ·
-        Tipo: ${getTipoLabel(record)} ·
-        Método: ${record.metodo}${record.metodo==='Transferencia' ? ' ('+(record.banco||'')+')' : ''}${(record.metodo==='Efectivo' && isTipoEntrada(record.tipo) && record.recibido!=null) ? ' · Recibido: '+fmt(record.recibido)+' · Cambio: '+fmt(record.cambio||0) : ''}
+        Fecha/Hora: ${fmtTS(record.ts)} Â·
+        No. TransacciÃ³n: ${record.id} Â·
+        Tipo: ${getTipoLabel(record)} Â·
+        MÃ©todo: ${record.metodo}${record.metodo==='Transferencia' ? ' ('+(record.banco||'')+')' : ''}${(record.metodo==='Efectivo' && isTipoEntrada(record.tipo) && record.recibido!=null) ? ' Â· Recibido: '+fmt(record.recibido)+' Â· Cambio: '+fmt(record.cambio||0) : ''}
       </div>
       <table class="tbl" style="width:100%;border-collapse:collapse">
-        <thead><tr><th style="width:10%;text-align:left">CANT</th><th style="text-align:left">DESCRIPCIÓN</th><th style="width:20%;text-align:right">PRECIO</th><th style="width:20%;text-align:right">IMPORTE</th></tr></thead>
+        <thead><tr><th style="width:10%;text-align:left">CANT</th><th style="text-align:left">DESCRIPCIÃ“N</th><th style="width:20%;text-align:right">PRECIO</th><th style="width:20%;text-align:right">IMPORTE</th></tr></thead>
         <tbody>
           <tr><td>1</td><td>${descSafe}</td><td style="text-align:right">${precioTxt}</td><td style="text-align:right">${precioTxt}</td></tr>
         </tbody>
@@ -1798,14 +1801,14 @@ function printReceipt(record){
       <div style="text-align:center;margin-top:8px">
         <div style="font-weight:700;margin-bottom:6px">DOCUMENTO NO FISCAL</div>
         <img src="${qrSrc}" width="180" height="180" alt="QR"/>
-        <div style="font-size:11px;margin-top:4px">Escanéame para agendar</div>
+        <div style="font-size:11px;margin-top:4px">EscanÃ©ame para agendar</div>
       </div>
       <div style="margin-top:14mm;font-size:12px">Firma: <span style="display:inline-block;border-bottom:1px solid #000;min-width:120px"></span></div>
-      <div style="font-size:11px;margin-top:6px">Este comprobante es válido como recibo interno.</div>
-      <div style="font-size:11px;margin-top:6px;font-weight:700">Al finalizar tus abonos, debes presentar TODOS tus recibos y solicitar tu factura o comprobante de crédito fiscal.</div>
+      <div style="font-size:11px;margin-top:6px">Este comprobante es vÃ¡lido como recibo interno.</div>
+      <div style="font-size:11px;margin-top:6px;font-weight:700">Al finalizar tus abonos, debes presentar TODOS tus recibos y solicitar tu factura o comprobante de crÃ©dito fiscal.</div>
     </div>`;
 
-  // --- Abrir en ventana pequeña y enviar a imprimir UNA sola vez ---
+  // --- Abrir en ventana pequeÃ±a y enviar a imprimir UNA sola vez ---
   let printed = false;
   const openPrintPopup = (html) => {
     if (printed) return;
@@ -1836,7 +1839,7 @@ function printReceipt(record){
   // Render tablas
   function rowHTML(r, withActions){
   const metodoHTML = r.metodo==='Efectivo' ? '<span class="pill cash">Efectivo</span>' : '<span class="pill trf">Transferencia</span>';
-const bancoHTML = r.metodo==='Transferencia' ? `<span class="bank-badge">${r.banco||''}</span>` : '<span class="bank-badge" style="opacity:.5">—</span>';
+const bancoHTML = r.metodo==='Transferencia' ? `<span class="bank-badge">${r.banco||''}</span>` : '<span class="bank-badge" style="opacity:.5">â€”</span>';
 const tipoHTML = getTipoBadgeHTML(r);
 const accHTML = withActions ? `
   <div class="btn-row" style="margin:0">
@@ -1876,7 +1879,7 @@ const selTD = withActions ? `<td><input type="checkbox" class="chk-reg" data-id=
     els.tablaRegistro.querySelectorAll('.btn-edit').forEach(b=> b.addEventListener('click', onEdit));
     els.tablaRegistro.querySelectorAll('.btn-del').forEach(b=> b.addEventListener('click', onDelete));
     els.tablaRegistro.querySelectorAll('.btn-print').forEach(b=> b.addEventListener('click', onPrintById));
-// Selección múltiple: master checkbox
+// SelecciÃ³n mÃºltiple: master checkbox
 const master = document.getElementById('chkAllReg');
 if (master){
   master.checked = false;
@@ -1884,14 +1887,14 @@ if (master){
     document.querySelectorAll('#tablaRegistro .chk-reg').forEach(cb=> cb.checked = master.checked);
   };
 }
-// Eliminar seleccionados (evitar múltiples handlers)
+// Eliminar seleccionados (evitar mÃºltiples handlers)
 const btnDelSel = document.getElementById('btnEliminarSeleccion');
 if (btnDelSel){
   btnDelSel.onclick = ()=>{
     const marcados = [...document.querySelectorAll('#tablaRegistro .chk-reg:checked')];
     const ids = marcados.map(cb=> cb.dataset.id);
-    if (!ids.length){ alert('Selecciona al menos una transacción.'); return; }
-    if (!confirm(`Eliminar ${ids.length} transacción(es) seleccionada(s)?`)) return;
+    if (!ids.length){ alert('Selecciona al menos una transacciÃ³n.'); return; }
+    if (!confirm(`Eliminar ${ids.length} transacciÃ³n(es) seleccionada(s)?`)) return;
     tx = tx.filter(r => !ids.includes(r.id));
     save();
     renderKPIs();
@@ -1959,9 +1962,9 @@ if (btnDelSel){
       if(isTipoEntrada(r.tipo)) ent += parseMontoFlexible(r.monto);
       else if(!isPagoEspecialRemesa(r)) sal += parseMontoFlexible(r.monto);
     }
-    els.totales.innerHTML = `Totales (${list.length} tx) — Entradas: <b>${fmt(ent)}</b> · Salidas: <b>${fmt(sal)}</b> · Neto: <b>${fmt(ent-sal)}</b>`;
+    els.totales.innerHTML = `Totales (${list.length} tx) â€” Entradas: <b>${fmt(ent)}</b> Â· Salidas: <b>${fmt(sal)}</b> Â· Neto: <b>${fmt(ent-sal)}</b>`;
     const totHead = document.getElementById('totalesHeader');
-    if (totHead) totHead.innerHTML = `Totales (${list.length} tx) — Entradas: <b>${fmt(ent)}</b> · Salidas: <b>${fmt(sal)}</b> · Neto: <b>${fmt(ent-sal)}</b>`;
+    if (totHead) totHead.innerHTML = `Totales (${list.length} tx) â€” Entradas: <b>${fmt(ent)}</b> Â· Salidas: <b>${fmt(sal)}</b> Â· Neto: <b>${fmt(ent-sal)}</b>`;
   }
 
   function updatePeriodoUI(){
@@ -1997,8 +2000,8 @@ if (btnDelSel){
   }
 
   function statsLabelForPeriod(){
-    if(!els.statsPeriodo) return 'Período actual';
-    if(els.statsPeriodo.value==='todo') return 'Histórico completo';
+    if(!els.statsPeriodo) return 'PerÃ­odo actual';
+    if(els.statsPeriodo.value==='todo') return 'HistÃ³rico completo';
     if(els.statsPeriodo.value==='rango'){
       if(els.statsDesde.value && els.statsHasta.value) return `Rango ${els.statsDesde.value} a ${els.statsHasta.value}`;
       return 'Rango personalizado';
@@ -2052,7 +2055,7 @@ if (btnDelSel){
       if(esPagoEspecial){
         const categoria = String(r.pagoEspecial || '').trim().toLowerCase();
         if(categoria === 'ganancia') gananciaEspecial += monto;
-        else if(categoria === 'compensación a propietario' || categoria === 'compensacion a propietario') compensacionEspecial += monto;
+        else if(categoria === 'compensaciÃ³n a propietario' || categoria === 'compensacion a propietario') compensacionEspecial += monto;
         else if(categoria === 'impuestos') impuestosEspecial += monto;
         else if(categoria === 'gastos operativos') gastosOperativosEspecial += monto;
         else if(categoria === 'remesa') remesaEspecial += monto;
@@ -2105,12 +2108,12 @@ if (btnDelSel){
       { label:'Entradas', value:data.entradas, color:'#22c55e' },
       { label:'Disponible', value:positiveDisponible, color:'#6366f1' },
       { label:'Ganancia', value:data.gananciaEspecial, color:'#14b8a6' },
-      { label:'Compensación a propietario', value:data.compensacionEspecial, color:'#8b5cf6' },
+      { label:'CompensaciÃ³n a propietario', value:data.compensacionEspecial, color:'#8b5cf6' },
       { label:'Impuestos', value:data.impuestosEspecial, color:'#f59e0b' },
       { label:'Gastos operativos', value:data.gastosOperativosEspecial, color:'#f97316' },
       { label:'Remesa', value:data.remesaEspecial, color:'#ec4899' },
       { label:'Otras salidas', value:otrasSalidas, color:'#ef4444' },
-      { label:'Pérdida', value:perdida, color:'#eab308' }
+      { label:'PÃ©rdida', value:perdida, color:'#eab308' }
     ].filter(x => x.value > 0);
     const total = segments.reduce((a,b)=>a+b.value,0);
     const cx = size/2, cy = size/2, radius = 108, inner = 54;
@@ -2162,12 +2165,12 @@ if (btnDelSel){
     if(!els.statsLegend) return;
     const total = segments.reduce((a,b)=>a+b.value,0);
     if(!segments.length){
-      els.statsLegend.innerHTML = '<div class="stats-legend-item"><div class="stats-legend-left"><span class="stats-swatch" style="background:#64748b"></span><span>No hay movimientos en el período seleccionado.</span></div></div>';
+      els.statsLegend.innerHTML = '<div class="stats-legend-item"><div class="stats-legend-left"><span class="stats-swatch" style="background:#64748b"></span><span>No hay movimientos en el perÃ­odo seleccionado.</span></div></div>';
       return;
     }
     els.statsLegend.innerHTML = segments.map(seg => {
       const pct = total > 0 ? ((seg.value / total) * 100).toFixed(1) : '0.0';
-      return `<div class="stats-legend-item"><div class="stats-legend-left"><span class="stats-swatch" style="background:${seg.color}"></span><span>${seg.label}</span></div><div><strong>${fmt(seg.value)}</strong> · ${pct}%</div></div>`;
+      return `<div class="stats-legend-item"><div class="stats-legend-left"><span class="stats-swatch" style="background:${seg.color}"></span><span>${seg.label}</span></div><div><strong>${fmt(seg.value)}</strong> Â· ${pct}%</div></div>`;
     }).join('');
   }
 
@@ -2191,11 +2194,11 @@ if (btnDelSel){
     const ganancia = Math.max(data.resultado, 0);
     const perdida = Math.max(-data.resultado, 0);
     els.statsResumen.innerHTML = [
-      `<div class="stats-resumen-item"><strong>Disponible del período:</strong> ${fmt(data.disponible)} · Entradas ${fmt(data.entradas)}${data.capitalPrestamos>0 ? ' + capital/préstamos ' + fmt(data.capitalPrestamos) : ''} menos salidas ${fmt(data.salidas)}${data.remesaEspecial>0 ? ' y remesas ' + fmt(data.remesaEspecial) : ''}.</div>`,
-      `<div class="stats-resumen-item"><strong>Ganancia neta del período:</strong> ${fmt(ganancia)}${ganancia===0 ? ' · todavía no hay utilidad neta registrada en ese rango.' : ''}</div>`,
-      `<div class="stats-resumen-item"><strong>Pérdida del período:</strong> ${fmt(perdida)}${perdida===0 ? ' · no hay déficit en el rango seleccionado.' : ''}</div>`,
-      `<div class="stats-resumen-item"><strong>Balance por método:</strong> Efectivo ${fmt(data.efectivo)} · Bancos ${fmt(data.bancos)}</div>`,
-      `<div class="stats-resumen-item"><strong>Operaciones especiales:</strong> Ganancia ${fmt(data.gananciaEspecial)} · Compensación a propietario ${fmt(data.compensacionEspecial)} · Impuestos ${fmt(data.impuestosEspecial)} · Gastos operativos ${fmt(data.gastosOperativosEspecial)} · Remesa ${fmt(data.remesaEspecial)}</div>`
+      `<div class="stats-resumen-item"><strong>Disponible del perÃ­odo:</strong> ${fmt(data.disponible)} Â· Entradas ${fmt(data.entradas)}${data.capitalPrestamos>0 ? ' + capital/prÃ©stamos ' + fmt(data.capitalPrestamos) : ''} menos salidas ${fmt(data.salidas)}${data.remesaEspecial>0 ? ' y remesas ' + fmt(data.remesaEspecial) : ''}.</div>`,
+      `<div class="stats-resumen-item"><strong>Ganancia neta del perÃ­odo:</strong> ${fmt(ganancia)}${ganancia===0 ? ' Â· todavÃ­a no hay utilidad neta registrada en ese rango.' : ''}</div>`,
+      `<div class="stats-resumen-item"><strong>PÃ©rdida del perÃ­odo:</strong> ${fmt(perdida)}${perdida===0 ? ' Â· no hay dÃ©ficit en el rango seleccionado.' : ''}</div>`,
+      `<div class="stats-resumen-item"><strong>Balance por mÃ©todo:</strong> Efectivo ${fmt(data.efectivo)} Â· Bancos ${fmt(data.bancos)}</div>`,
+      `<div class="stats-resumen-item"><strong>Operaciones especiales:</strong> Ganancia ${fmt(data.gananciaEspecial)} Â· CompensaciÃ³n a propietario ${fmt(data.compensacionEspecial)} Â· Impuestos ${fmt(data.impuestosEspecial)} Â· Gastos operativos ${fmt(data.gastosOperativosEspecial)} Â· Remesa ${fmt(data.remesaEspecial)}</div>`
     ].join('');
   }
 
@@ -2239,8 +2242,8 @@ if (btnDelSel){
     toggleEditSpecialPayment();
     toggleEditDescriptionRequirement();
     els.editMonto.value = r.monto;
-    const bancosBase = ['Agrícola','BAC'];
-    const bancoGuardado = r.banco || 'Agrícola';
+    const bancosBase = ['AgrÃ­cola','BAC'];
+    const bancoGuardado = r.banco || 'AgrÃ­cola';
     els.editBankWrap.style.display = r.metodo==='Transferencia' ? 'block':'none';
     if(r.metodo==='Transferencia' && !bancosBase.includes(bancoGuardado)){
       els.editBanco.value = 'Otros';
@@ -2281,17 +2284,17 @@ if (btnDelSel){
     const i = tx.findIndex(x=>x.id===id);
     if(i<0){ els.dlgEditar.close(); return; }
     const monto = parseFloat(els.editMonto.value);
-    if(Number.isNaN(monto)||monto<=0){ alert('Monto inválido'); return; }
+    if(Number.isNaN(monto)||monto<=0){ alert('Monto invÃ¡lido'); return; }
     const requiereDescripcionEdicion = els.editTipo.value!=='Pagos especiales' || specialPaymentNeedsDescription(els.editPagoEspecial.value);
-    if(requiereDescripcionEdicion && !els.editDesc.value.trim()){ alert('Descripción requerida'); return; }
+    if(requiereDescripcionEdicion && !els.editDesc.value.trim()){ alert('DescripciÃ³n requerida'); return; }
     if(els.editMetodo.value==='Transferencia' && !els.editBanco.value){ alert('Selecciona banco'); return; }
     if(els.editMetodo.value==='Transferencia' && els.editBanco.value==='Otros' && !els.editOtroBanco.value.trim()){ alert('Ingresa el nombre de la financiera o banco'); return; }
-    if(els.editTipo.value==='Pagos especiales' && !els.editPagoEspecial.value){ alert('Selecciona la categoría de pago especial'); return; }
+    if(els.editTipo.value==='Pagos especiales' && !els.editPagoEspecial.value){ alert('Selecciona la categorÃ­a de pago especial'); return; }
     if(els.editTipo.value==='Pagos especiales' && specialPaymentUsesAutoCalc(els.editPagoEspecial.value)){
       const porcentaje = parseFloat(els.editPorcentajeEspecial?.value);
-      if(Number.isNaN(porcentaje) || porcentaje<=0){ alert('Ingresa un porcentaje válido'); return; }
+      if(Number.isNaN(porcentaje) || porcentaje<=0){ alert('Ingresa un porcentaje vÃ¡lido'); return; }
       if(!els.editRangoEspecialDesde?.value || !els.editRangoEspecialHasta?.value){ alert('Selecciona el rango de fechas'); return; }
-      if(els.editRangoEspecialDesde.value > els.editRangoEspecialHasta.value){ alert('El rango de fechas no es válido'); return; }
+      if(els.editRangoEspecialDesde.value > els.editRangoEspecialHasta.value){ alert('El rango de fechas no es vÃ¡lido'); return; }
       recalculateEditSpecialAmount();
     }
     const local = new Date(els.editFecha.value);
@@ -2318,7 +2321,7 @@ if (btnDelSel){
   // Eliminar / Imprimir desde registro
   function onDelete(e){
     const id = e.currentTarget.dataset.id;
-    if(!confirm(`Eliminar transacción ${id}?`)) return;
+    if(!confirm(`Eliminar transacciÃ³n ${id}?`)) return;
     tx = tx.filter(x=>x.id!==id);
     save();
     renderKPIs();
@@ -2352,7 +2355,7 @@ if (btnDelSel){
     els.desc.value='';
     els.monto.value='';
     els.metodo.value='Efectivo';
-    els.banco.value='Agrícola';
+    els.banco.value='AgrÃ­cola';
     if(els.otroBanco) els.otroBanco.value='';
     els.tipo.value='Entrada';
     if(els.pagoEspecial) els.pagoEspecial.value='';
@@ -2486,19 +2489,19 @@ if (btnDelSel){
     function loadPastedTicketRows(){
       const rows = parsePastedTicketRows(txtPaste?.value || '');
       if(!rows.length){
-        setPasteMessage('No encontré filas válidas. Copia desde Excel en orden: descripción, cantidad, precio y total.', true);
+        setPasteMessage('No encontrÃ© filas vÃ¡lidas. Copia desde Excel en orden: descripciÃ³n, cantidad, precio y total.', true);
         return;
       }
       tbody.innerHTML = '';
       rows.forEach(row => addRow(row));
       recalcGrandTotal();
-      setPasteMessage(`Se cargaron ${rows.length} línea(s) desde el pegado.`);
+      setPasteMessage(`Se cargaron ${rows.length} lÃ­nea(s) desde el pegado.`);
     }
 
     function addRow(data={}){
       const tr = document.createElement('tr');
       tr.innerHTML = `
-        <td><input class="ticket-desc" type="text" placeholder="Descripción" value="${esc(data.desc || '')}"></td>
+        <td><input class="ticket-desc" type="text" placeholder="DescripciÃ³n" value="${esc(data.desc || '')}"></td>
         <td><input class="ticket-cant" type="number" min="0" step="0.01" placeholder="0" value="${data.cant ?? ''}"></td>
         <td><input class="ticket-precio" type="number" min="0" step="0.01" placeholder="0.00" value="${data.precio ?? ''}"></td>
         <td><input class="ticket-total" type="number" min="0" step="0.01" placeholder="0.00" value="${data.total ?? ''}"></td>
@@ -2580,7 +2583,7 @@ if (btnDelSel){
       if(questionTx) questionTx.style.display = 'none';
       if(formTx) formTx.style.display = 'block';
       if(txMetodo) txMetodo.value = 'Efectivo';
-      if(txBanco) txBanco.value = 'Agrícola';
+      if(txBanco) txBanco.value = 'AgrÃ­cola';
       if(txOtroBanco) txOtroBanco.value = '';
       if(txDesc && !txDesc.value.trim()) txDesc.value = 'Ingreso por ticket emitido';
       if(txMonto) txMonto.value = getManualTicketTotal().toFixed(2);
@@ -2590,9 +2593,9 @@ if (btnDelSel){
 
     function validateManualTicketRows(){
       const rows = getRows();
-      if(!rows.length){ alert('Agrega al menos una línea al ticket.'); return null; }
+      if(!rows.length){ alert('Agrega al menos una lÃ­nea al ticket.'); return null; }
       const invalid = rows.some(r => !String(r.desc || '').trim());
-      if(invalid){ alert('Solo la descripción es obligatoria. Cantidad, precio y total pueden quedar vacíos o en cero.'); return null; }
+      if(invalid){ alert('Solo la descripciÃ³n es obligatoria. Cantidad, precio y total pueden quedar vacÃ­os o en cero.'); return null; }
       return rows;
     }
 
@@ -2602,12 +2605,12 @@ if (btnDelSel){
       const metodo = txMetodo?.value || 'Efectivo';
       const monto = parseFloat(txMonto?.value || '0');
       const desc = (txDesc?.value || '').trim();
-      if(!['Efectivo','Transferencia'].includes(metodo)){ alert('Selecciona un método válido.'); return false; }
+      if(!['Efectivo','Transferencia'].includes(metodo)){ alert('Selecciona un mÃ©todo vÃ¡lido.'); return false; }
       if(metodo === 'Transferencia' && txBanco?.value === 'Otros' && !String(txOtroBanco?.value || '').trim()){
         alert('Ingresa el nombre de la financiera o banco.'); return false;
       }
-      if(!desc){ alert('Ingresa una descripción breve.'); return false; }
-      if(!Number.isFinite(monto) || monto < 0){ alert('Ingresa una cantidad válida.'); return false; }
+      if(!desc){ alert('Ingresa una descripciÃ³n breve.'); return false; }
+      if(!Number.isFinite(monto) || monto < 0){ alert('Ingresa una cantidad vÃ¡lida.'); return false; }
       const record = {
         id: genId(),
         ts: new Date().toISOString(),
@@ -2658,14 +2661,14 @@ if (btnDelSel){
         <div class="ticket">
           <header>
             <h1 style="margin:0;font-size:14px">AUTOMOTRIZ MEDINA SV</h1>
-            <p style="margin:2px 0 0 0;font-size:11px">Especialistas en Diagnóstico Electrónico</p>
-            <p style="margin:2px 0 0 0;font-size:11px">Ruta Militar, 100 m al oriente del Puente Urbina, San Miguel · WhatsApp 7166-0867</p>
+            <p style="margin:2px 0 0 0;font-size:11px">Especialistas en DiagnÃ³stico ElectrÃ³nico</p>
+            <p style="margin:2px 0 0 0;font-size:11px">Ruta Militar, 100 m al oriente del Puente Urbina, San Miguel Â· WhatsApp 7166-0867</p>
           </header>
           <div class="meta" style="font-size:11px;margin:6px 0">
-            Fecha/Hora: ${fmtTS(new Date().toISOString())} · No. Ticket: ${ticketId}
+            Fecha/Hora: ${fmtTS(new Date().toISOString())} Â· No. Ticket: ${ticketId}
           </div>
           <table class="tbl" style="width:100%;border-collapse:collapse">
-            <thead><tr><th style="width:10%;text-align:left">CANT</th><th style="text-align:left">DESCRIPCIÓN</th><th style="width:20%;text-align:right">PRECIO</th><th style="width:20%;text-align:right">IMPORTE</th></tr></thead>
+            <thead><tr><th style="width:10%;text-align:left">CANT</th><th style="text-align:left">DESCRIPCIÃ“N</th><th style="width:20%;text-align:right">PRECIO</th><th style="width:20%;text-align:right">IMPORTE</th></tr></thead>
             <tbody>${rowsHTML}</tbody>
           </table>
           <div class="total" style="display:flex;justify-content:space-between;margin-top:8px;font-weight:700">
@@ -2674,11 +2677,11 @@ if (btnDelSel){
           <div style="text-align:center;margin-top:8px">
             <div style="font-weight:700;margin-bottom:6px">DOCUMENTO NO FISCAL</div>
             <img src="${qrSrcManual}" width="180" height="180" alt="QR"/>
-            <div style="font-size:11px;margin-top:4px">Escanéame para agendar</div>
+            <div style="font-size:11px;margin-top:4px">EscanÃ©ame para agendar</div>
           </div>
           <div style="margin-top:14mm;font-size:12px">Firma: <span style="display:inline-block;border-bottom:1px solid #000;min-width:120px"></span></div>
-          <div style="font-size:11px;margin-top:6px">Este comprobante es válido como recibo interno.</div>
-          <div style="font-size:11px;margin-top:6px;font-weight:700">Al finalizar tus abonos, debes presentar TODOS tus recibos y solicitar tu factura o comprobante de crédito fiscal.</div>
+          <div style="font-size:11px;margin-top:6px">Este comprobante es vÃ¡lido como recibo interno.</div>
+          <div style="font-size:11px;margin-top:6px;font-weight:700">Al finalizar tus abonos, debes presentar TODOS tus recibos y solicitar tu factura o comprobante de crÃ©dito fiscal.</div>
         </div>`;
       const w = window.open('', 'TICKET_MANUAL', 'width=480,height=720,menubar=no,toolbar=no,location=no,status=no,scrollbars=yes');
       if(!w){ alert('Permite ventanas emergentes para imprimir el ticket.'); return; }
@@ -2748,7 +2751,7 @@ if (btnDelSel){
   }
   init();
 
-  // === Refresco central cuando cambian datos por importación/Excel ===
+  // === Refresco central cuando cambian datos por importaciÃ³n/Excel ===
   function __refreshDesdeExcel(){
     try{
       load();
@@ -2756,7 +2759,7 @@ if (btnDelSel){
       if(els.dlgRegistro.open) renderRegistro();
       if(els.dlgControl.open) applyFilters();
       if(els.dlgEstadisticas && els.dlgEstadisticas.open) renderEstadisticas();
-    }catch(e){ console.warn('No se pudo refrescar la UI tras importación:', e); }
+    }catch(e){ console.warn('No se pudo refrescar la UI tras importaciÃ³n:', e); }
   }
   window.addEventListener('datosCajaActualizados', __refreshDesdeExcel);
   window.addEventListener('storage', __refreshDesdeExcel);
@@ -2769,24 +2772,24 @@ if (btnDelSel){
   <form method="dialog" class="modal-box">
     <div class="modal-header">
       <h3>Pago de Empleados</h3>
-      <button id="closeEmpleados" class="btn-close" value="close">Cerrar ✕</button>
+      <button id="closeEmpleados" class="btn-close" value="close">Cerrar âœ•</button>
     </div>
 
     <div class="tabs">
       <button type="button" class="tab active" id="tabIng">Nuevo ingreso</button>
       <button type="button" class="tab" id="tabPlan">Planilla</button>
       <button type="button" class="tab" id="tabHist">Historial</button>
-      <button type="button" class="btn-danger" id="btnEliminarHistorial" style="margin-left:auto;">🗑 Eliminar historial</button>
+      <button type="button" class="btn-danger" id="btnEliminarHistorial" style="margin-left:auto;">ðŸ—‘ Eliminar historial</button>
     </div>
 
     <!-- Nuevo ingreso -->
     <section id="secIngreso" class="tabpane active">
       <div class="card">
-        <label>Vehículo</label>
+        <label>VehÃ­culo</label>
         <input type="text" id="empVehiculo" placeholder="Ej: Nissan Rogue 2015">
         <div class="grid2">
           <div>
-            <label>Técnico</label>
+            <label>TÃ©cnico</label>
             <select id="empTecnico">
               <option>Rafael</option>
               <option>Edwin</option>
@@ -2794,17 +2797,17 @@ if (btnDelSel){
               <option value="__otro__">Otro</option>
             </select>
             <div id="empTecnicoOtroWrap" style="display:none;margin-top:10px;">
-              <label for="empTecnicoOtro">Nombre del técnico</label>
-              <input type="text" id="empTecnicoOtro" placeholder="Ingresa el nombre del técnico" autocomplete="off">
+              <label for="empTecnicoOtro">Nombre del tÃ©cnico</label>
+              <input type="text" id="empTecnicoOtro" placeholder="Ingresa el nombre del tÃ©cnico" autocomplete="off">
             </div>
           </div>
           <div>
-            <label>Fecha de recepción</label>
+            <label>Fecha de recepciÃ³n</label>
             <input type="date" id="empFecha">
           </div>
         </div>
         <button type="button" id="btnEmpCargar" class="btn-primary">Cargar</button>
-        <span class="muted">Se creará el perfil del trabajo y quedará <b>pendiente de pago</b>.</span>
+        <span class="muted">Se crearÃ¡ el perfil del trabajo y quedarÃ¡ <b>pendiente de pago</b>.</span>
       </div>
     </section>
 
@@ -2813,11 +2816,11 @@ if (btnDelSel){
       <div class="card">
         <div class="grid3">
           <div>
-            <label>Buscar (vehículo o descripción)</label>
+            <label>Buscar (vehÃ­culo o descripciÃ³n)</label>
             <input type="text" id="plBuscar" placeholder="Escribe para filtrar...">
           </div>
           <div>
-            <label>Técnico</label>
+            <label>TÃ©cnico</label>
             <select id="plTecnico">
               <option value="">Todos</option>
               <option>Rafael</option>
@@ -2849,11 +2852,11 @@ if (btnDelSel){
       <div class="card">
         <div class="grid3">
           <div>
-            <label>Buscar (vehículo o descripción)</label>
+            <label>Buscar (vehÃ­culo o descripciÃ³n)</label>
             <input type="text" id="hiBuscar" placeholder="Escribe para filtrar...">
           </div>
           <div>
-            <label>Técnico</label>
+            <label>TÃ©cnico</label>
             <select id="hiTecnico">
               <option value="">Todos</option>
               <option>Rafael</option>
@@ -2910,16 +2913,16 @@ if (btnDelSel){
     div.className='item';
     div.innerHTML = `
       <h5>#${idx+1} ${r.vehiculo}</h5>
-      <div>Recepción: ${r.fecha} — Pago: — <span style="float:right">Técnico: <b>${r.tecnico}</b> <span class="badge" style="background:#8b6b04;color:#fff;margin-left:8px">Pendiente</span></span></div>
+      <div>RecepciÃ³n: ${r.fecha} â€” Pago: â€” <span style="float:right">TÃ©cnico: <b>${r.tecnico}</b> <span class="badge" style="background:#8b6b04;color:#fff;margin-left:8px">Pendiente</span></span></div>
       <div class="row">
-        <textarea class="grow" rows="2" placeholder="Descripción del trabajo realizado">${r.descripcion||''}</textarea>
+        <textarea class="grow" rows="2" placeholder="DescripciÃ³n del trabajo realizado">${r.descripcion||''}</textarea>
       </div>
       <div class="row">
         <input class="monto" type="number" step="0.01" min="0" placeholder="Monto a pagar (USD)" style="flex:1">
         <button class="pagar btn-primary" type="button">Pagar</button>
       </div>
       <div class="row">
-        <button class="eliminar" type="button" style="margin-left:8px">🗑 Eliminar</button>
+        <button class="eliminar" type="button" style="margin-left:8px">ðŸ—‘ Eliminar</button>
       </div>
     `;
     const ta = $('textarea', div);
@@ -2927,16 +2930,16 @@ if (btnDelSel){
     $('.eliminar',div).addEventListener('click', ()=>{ if(confirm('Eliminar este trabajo?')){ jobs = jobs.filter(x=>x.id!==r.id); save(); renderPlanilla(); } });
     $('.pagar',div).addEventListener('click', ()=>{
       const monto = Number($('.monto',div).value||0);
-      if(!(monto>0)) { alert('Ingresa un monto válido'); return; }
+      if(!(monto>0)) { alert('Ingresa un monto vÃ¡lido'); return; }
       r.monto = monto;
       r.estado = 'pagado';
       r.fechaPago = new Date().toISOString();
       save();
-      // === Nuevo: registrar automáticamente la salida en Caja y emitir ticket ===
+      // === Nuevo: registrar automÃ¡ticamente la salida en Caja y emitir ticket ===
       try{
-        // 1) Preparar descripción con vehículo y técnico
-        const descText = `Pago de planilla — ${r.vehiculo} — ${r.tecnico||'Técnico'}`.trim();
-        // 2) Cargar los campos del módulo de Caja
+        // 1) Preparar descripciÃ³n con vehÃ­culo y tÃ©cnico
+        const descText = `Pago de planilla â€” ${r.vehiculo} â€” ${r.tecnico||'TÃ©cnico'}`.trim();
+        // 2) Cargar los campos del mÃ³dulo de Caja
         const $d = s=>document.querySelector(s);
         const iDesc = $d('#desc');
         const iMetodo = $d('#metodo');
@@ -2961,7 +2964,7 @@ if (btnDelSel){
           console.warn('No se encontraron inputs de Caja para registrar el gasto operativo desde Planilla.');
         }
       }catch(e){ console.error('Error registrando salida en Caja desde Planilla:', e); }
-      // === Fin: integración Caja ===
+      // === Fin: integraciÃ³n Caja ===
       renderPlanilla();
     });
     return div;
@@ -3016,9 +3019,9 @@ if (btnDelSel){
       const div = document.createElement('div');
       div.className='item';
       div.innerHTML = `
-        <h5>#${i+1} ${r.vehiculo} <span style="float:right">Técnico: ${r.tecnico} <span class="badge">Vehículo pagado</span></span></h5>
-        <div>Recepción: ${(r.fecha||'').slice(0,10)} — Pago: ${new Date(r.fechaPago||r.fecha).toLocaleString()}</div>
-        <div>${r.descripcion? r.descripcion : 'Sin descripción'}</div>
+        <h5>#${i+1} ${r.vehiculo} <span style="float:right">TÃ©cnico: ${r.tecnico} <span class="badge">VehÃ­culo pagado</span></span></h5>
+        <div>RecepciÃ³n: ${(r.fecha||'').slice(0,10)} â€” Pago: ${new Date(r.fechaPago||r.fecha).toLocaleString()}</div>
+        <div>${r.descripcion? r.descripcion : 'Sin descripciÃ³n'}</div>
         <div style="font-weight:700;margin-top:8px">${fmt(r.monto||0)}</div>
       `;
       wrap.appendChild(div);
@@ -3035,7 +3038,7 @@ if (btnDelSel){
   document.getElementById('tabPlan')?.addEventListener('click', ()=>setActive('plan'));
   document.getElementById('tabHist')?.addEventListener('click', ()=>setActive('hist'));
 
-  // Filtros de Planilla e Historial: botón de búsqueda + actualización por Enter/cambio.
+  // Filtros de Planilla e Historial: botÃ³n de bÃºsqueda + actualizaciÃ³n por Enter/cambio.
   document.getElementById('btnPlBuscar')?.addEventListener('click', renderPlanilla);
   document.getElementById('btnPlLimpiar')?.addEventListener('click', ()=>{
     const b=document.getElementById('plBuscar'), t=document.getElementById('plTecnico'), r=document.getElementById('plRango');
@@ -3055,7 +3058,7 @@ if (btnDelSel){
   document.getElementById('hiRango')?.addEventListener('change', renderHistorial);
 
   document.getElementById('btnEliminarHistorial')?.addEventListener('click', ()=>{
-    if(confirm('Eliminar todos los pagos ya marcados como "vehículo pagado"?')){
+    if(confirm('Eliminar todos los pagos ya marcados como "vehÃ­culo pagado"?')){
       jobs = jobs.filter(j=>j.estado!=='pagado');
       save(); renderHistorial();
     }
@@ -3085,8 +3088,8 @@ if (btnDelSel){
     const tecOtro = (document.getElementById('empTecnicoOtro')?.value||'').trim();
     const tec = tecSel === '__otro__' ? tecOtro : tecSel;
     const fec = document.getElementById('empFecha').value || hoyISO();
-    if(!veh){ alert('Ingresa el vehículo'); return; }
-    if(tecSel === '__otro__' && !tecOtro){ alert('Ingresa el nombre del técnico'); return; }
+    if(!veh){ alert('Ingresa el vehÃ­culo'); return; }
+    if(tecSel === '__otro__' && !tecOtro){ alert('Ingresa el nombre del tÃ©cnico'); return; }
     const rec = { id: crypto.randomUUID ? crypto.randomUUID() : String(Date.now()), vehiculo:veh, tecnico:tec, fecha:fec, descripcion:'', estado:'pendiente', monto:0 };
     load(); jobs.push(rec); save();
     setActive('plan');
@@ -3096,7 +3099,7 @@ if (btnDelSel){
 </script>
 
 <script>
-/* ===== Respaldo Excel automático (robusto y autónomo) ===== */
+/* ===== Respaldo Excel automÃ¡tico (robusto y autÃ³nomo) ===== */
 (() => {
   const KEY_CAJA = 'caja_tx_v6';
   const KEY_EMP  = 'empleados_v1';
@@ -3201,7 +3204,7 @@ if (btnDelSel){
         const rawLower = rawTipo.toLowerCase();
         if(rawLower === 'entrada de dinero') return 'Entrada';
         if(rawLower === 'salida de dinero') return 'Salida';
-        if(rawLower === 'capital o prestamos' || rawLower === 'capital o préstamos') return 'Capital o préstamos';
+        if(rawLower === 'capital o prestamos' || rawLower === 'capital o prÃ©stamos') return 'Capital o prÃ©stamos';
         return rawTipo || 'Entrada';
       })(),
       monto: n(r.monto),
@@ -3250,7 +3253,7 @@ if (btnDelSel){
     const provEmp = [...new Set(['Econoparts','Impresa','Superrepuesto','La Casa del Repuesto','REFRACSA',...provEmpSaved,...prov.map(f=>f.empresa)].map(x=>String(x||'').trim()).filter(Boolean))];
 
     const cajaRows = [
-      ['ID','Fecha/Hora','Descripción','Método','Banco','Tipo','Pago especial','Porcentaje especial','Rango especial desde','Rango especial hasta','Monto (USD)','Recibido (USD)','Cambio (USD)'],
+      ['ID','Fecha/Hora','DescripciÃ³n','MÃ©todo','Banco','Tipo','Pago especial','Porcentaje especial','Rango especial desde','Rango especial hasta','Monto (USD)','Recibido (USD)','Cambio (USD)'],
       ...caja.map(r => [
         r.id || '',
         fmtTSExcel(r.ts),
@@ -3269,7 +3272,7 @@ if (btnDelSel){
     ];
 
     const empRows = [
-      ['ID','Vehículo','Técnico','Fecha recepción','Estado','Fecha pago','Descripción','Monto (USD)'],
+      ['ID','VehÃ­culo','TÃ©cnico','Fecha recepciÃ³n','Estado','Fecha pago','DescripciÃ³n','Monto (USD)'],
       ...emp.map(r => [
         r.id || '',
         r.vehiculo || '',
@@ -3283,7 +3286,7 @@ if (btnDelSel){
     ];
 
     const cxcRows = [
-      ['ID','Cliente','Teléfono','Vehículo','Detalle','Total cuenta','Total abonado','Saldo','Fecha límite','Creada','Estado'],
+      ['ID','Cliente','TelÃ©fono','VehÃ­culo','Detalle','Total cuenta','Total abonado','Saldo','Fecha lÃ­mite','Creada','Estado'],
       ...cxc.map(a => {
         const abonos = Array.isArray(a.abonos) ? a.abonos : [];
         const totalAbonado = abonos.reduce((sum,b)=>sum+n(b.monto),0);
@@ -3293,7 +3296,7 @@ if (btnDelSel){
     ];
 
     const cxcAbonosRows = [
-      ['Cuenta ID','Abono ID','Fecha/Hora','Cliente','Monto','Método','Banco','Nota'],
+      ['Cuenta ID','Abono ID','Fecha/Hora','Cliente','Monto','MÃ©todo','Banco','Nota'],
       ...cxc.flatMap(a => (Array.isArray(a.abonos) ? a.abonos : []).map(b => [a.id || '', b.id || '', b.ts ? fmtTSExcel(b.ts) : '', a.cliente || '', n(b.monto), b.metodo || '', b.banco || '', b.nota || '']))
     ];
 
@@ -3463,7 +3466,7 @@ if (btnDelSel){
   function buildExcelBytes(){
     const bytes = buildZip(buildWorkbookFiles());
     if (!bytes || !bytes.length) throw new Error('No se pudo generar el archivo Excel.');
-    if (bytes[0] !== 0x50 || bytes[1] !== 0x4B) throw new Error('El archivo generado no tiene firma válida de Excel (.xlsx).');
+    if (bytes[0] !== 0x50 || bytes[1] !== 0x4B) throw new Error('El archivo generado no tiene firma vÃ¡lida de Excel (.xlsx).');
     return bytes;
   }
 
@@ -3489,7 +3492,7 @@ if (btnDelSel){
 
   async function onElegirExcel(){
     if (!window.showSaveFilePicker) {
-      alert('Tu navegador no soporta guardado directo. Usá “Descargar Excel” o Chrome/Edge.');
+      alert('Tu navegador no soporta guardado directo. UsÃ¡ â€œDescargar Excelâ€ o Chrome/Edge.');
       return;
     }
     excelHandle = await window.showSaveFilePicker({
@@ -3498,7 +3501,7 @@ if (btnDelSel){
     });
     await writeExcelToHandle(excelHandle);
     await idbSaveHandle(excelHandle);
-    alert('Listo: desde ahora el Excel se actualizará automáticamente en cada cambio.');
+    alert('Listo: desde ahora el Excel se actualizarÃ¡ automÃ¡ticamente en cada cambio.');
   }
   async function excelAutoSync(){
     try{
@@ -3517,7 +3520,7 @@ if (btnDelSel){
   function readU16(view, offset){ return view[offset] | (view[offset+1] << 8); }
   function readU32(view, offset){ return (view[offset]) | (view[offset+1] << 8) | (view[offset+2] << 16) | (view[offset+3] << 24); }
   async function inflateRaw(bytes){
-    if (typeof DecompressionStream === 'undefined') throw new Error('Este respaldo usa compresión no soportada por este navegador.');
+    if (typeof DecompressionStream === 'undefined') throw new Error('Este respaldo usa compresiÃ³n no soportada por este navegador.');
     const ds = new DecompressionStream('deflate-raw');
     const stream = new Blob([bytes]).stream().pipeThrough(ds);
     const ab = await new Response(stream).arrayBuffer();
@@ -3525,7 +3528,7 @@ if (btnDelSel){
   }
   async function unzipEntries(arrayBuffer){
     const bytes = new Uint8Array(arrayBuffer);
-    if (bytes[0] !== 0x50 || bytes[1] !== 0x4B) throw new Error('El archivo no es un .xlsx válido.');
+    if (bytes[0] !== 0x50 || bytes[1] !== 0x4B) throw new Error('El archivo no es un .xlsx vÃ¡lido.');
     const entries = {};
     let i = 0;
     const dec = new TextDecoder();
@@ -3543,8 +3546,8 @@ if (btnDelSel){
         let contentBytes;
         if (method === 0) contentBytes = raw;
         else if (method === 8) contentBytes = await inflateRaw(raw);
-        else throw new Error('Método de compresión ZIP no soportado.');
-        if (uncompSize && contentBytes.length !== uncompSize) console.warn('Tamaño ZIP distinto al esperado en', name);
+        else throw new Error('MÃ©todo de compresiÃ³n ZIP no soportado.');
+        if (uncompSize && contentBytes.length !== uncompSize) console.warn('TamaÃ±o ZIP distinto al esperado en', name);
         entries[name] = dec.decode(contentBytes);
         i = dataStart + compSize;
         continue;
@@ -3620,15 +3623,15 @@ if (btnDelSel){
     const cxcAbonosRows = bookRows['Abonos CxC'];
     const provRows = bookRows['Proveedores'];
     const provEmpRows = bookRows['Empresas proveedor'];
-    if (!cajaRows) throw new Error('No se encontró la hoja "Caja" en el Excel.');
-    if (!empRows) throw new Error('No se encontró la hoja "Empleados" en el Excel.');
+    if (!cajaRows) throw new Error('No se encontrÃ³ la hoja "Caja" en el Excel.');
+    if (!empRows) throw new Error('No se encontrÃ³ la hoja "Empleados" en el Excel.');
 
     const cajaObjs = rowsToObjects(cajaRows);
     const nuevosCaja = cajaObjs.map(({ row, idx }) => normalizeCajaRow({
       id: (idx('ID') > -1 && row[idx('ID')]) || '',
       ts: parseExcelDateLike((idx('Fecha/Hora') > -1 && row[idx('Fecha/Hora')]) || '') || new Date().toISOString(),
-      desc: (idx('Descripción') > -1 && row[idx('Descripción')]) || '',
-      metodo: (idx('Método') > -1 && row[idx('Método')]) || 'Efectivo',
+      desc: (idx('DescripciÃ³n') > -1 && row[idx('DescripciÃ³n')]) || '',
+      metodo: (idx('MÃ©todo') > -1 && row[idx('MÃ©todo')]) || 'Efectivo',
       banco: (idx('Banco') > -1 && row[idx('Banco')]) || '',
       tipo: (() => { const v = ((idx('Tipo') > -1 && row[idx('Tipo')]) || 'Entrada'); const s = String(v).trim().toLowerCase(); return s === 'entrada de dinero' ? 'Entrada' : s === 'salida de dinero' ? 'Salida' : v; })(),
       pagoEspecial: (idx('Pago especial') > -1 && row[idx('Pago especial')]) || '',
@@ -3643,12 +3646,12 @@ if (btnDelSel){
     const empObjs = rowsToObjects(empRows);
     const nuevosEmp = empObjs.map(({ row, idx }) => normalizeEmpRow({
       id: (idx('ID') > -1 && row[idx('ID')]) || '',
-      vehiculo: (idx('Vehículo') > -1 && row[idx('Vehículo')]) || '',
-      tecnico: (idx('Técnico') > -1 && row[idx('Técnico')]) || '',
-      fecha: (idx('Fecha recepción') > -1 && row[idx('Fecha recepción')]) || '',
+      vehiculo: (idx('VehÃ­culo') > -1 && row[idx('VehÃ­culo')]) || '',
+      tecnico: (idx('TÃ©cnico') > -1 && row[idx('TÃ©cnico')]) || '',
+      fecha: (idx('Fecha recepciÃ³n') > -1 && row[idx('Fecha recepciÃ³n')]) || '',
       estado: (idx('Estado') > -1 && row[idx('Estado')]) || 'pendiente',
       fechaPago: parseExcelDateLike((idx('Fecha pago') > -1 && row[idx('Fecha pago')]) || '') || null,
-      descripcion: (idx('Descripción') > -1 && row[idx('Descripción')]) || '',
+      descripcion: (idx('DescripciÃ³n') > -1 && row[idx('DescripciÃ³n')]) || '',
       monto: (idx('Monto (USD)') > -1 && row[idx('Monto (USD)')]) || 0
     }));
 
@@ -3664,7 +3667,7 @@ if (btnDelSel){
             id: (idx('Abono ID') > -1 && row[idx('Abono ID')]) || (crypto.randomUUID ? crypto.randomUUID() : String(Date.now()+Math.random())),
             ts: parseExcelDateLike((idx('Fecha/Hora') > -1 && row[idx('Fecha/Hora')]) || '') || new Date().toISOString(),
             monto: (idx('Monto') > -1 && row[idx('Monto')]) || 0,
-            metodo: (idx('Método') > -1 && row[idx('Método')]) || 'Efectivo',
+            metodo: (idx('MÃ©todo') > -1 && row[idx('MÃ©todo')]) || 'Efectivo',
             banco: (idx('Banco') > -1 && row[idx('Banco')]) || '',
             nota: (idx('Nota') > -1 && row[idx('Nota')]) || ''
           });
@@ -3675,11 +3678,11 @@ if (btnDelSel){
         return {
           id,
           cliente: (idx('Cliente') > -1 && row[idx('Cliente')]) || '',
-          telefono: (idx('Teléfono') > -1 && row[idx('Teléfono')]) || '',
-          vehiculo: (idx('Vehículo') > -1 && row[idx('Vehículo')]) || '',
+          telefono: (idx('TelÃ©fono') > -1 && row[idx('TelÃ©fono')]) || '',
+          vehiculo: (idx('VehÃ­culo') > -1 && row[idx('VehÃ­culo')]) || '',
           detalle: (idx('Detalle') > -1 && row[idx('Detalle')]) || '',
           total: (idx('Total cuenta') > -1 && row[idx('Total cuenta')]) || 0,
-          fechaLimite: (idx('Fecha límite') > -1 && row[idx('Fecha límite')]) || '',
+          fechaLimite: (idx('Fecha lÃ­mite') > -1 && row[idx('Fecha lÃ­mite')]) || '',
           createdAt: parseExcelDateLike((idx('Creada') > -1 && row[idx('Creada')]) || '') || new Date().toISOString(),
           abonos: (abonosPorCuenta[id] || []).map(a => ({...a, monto:n(a.monto)}))
         };
@@ -3719,7 +3722,7 @@ if (btnDelSel){
   async function onImportarExcel(){
     try{
       if (!window.showOpenFilePicker) {
-        alert('Tu navegador no soporta apertura directa. Usá Chrome/Edge.');
+        alert('Tu navegador no soporta apertura directa. UsÃ¡ Chrome/Edge.');
         return;
       }
       const [fileHandle] = await window.showOpenFilePicker({
@@ -3729,7 +3732,7 @@ if (btnDelSel){
       const arrayBuffer = await file.arrayBuffer();
       const bookRows = await workbookToRows(arrayBuffer);
       await processWorkbookRows(bookRows);
-      alert('Importación completada. Se cargaron registros de Caja y Empleados.');
+      alert('ImportaciÃ³n completada. Se cargaron registros de Caja y Empleados.');
       window.dispatchEvent(new Event('excelActualizado'));
       setTimeout(()=>{ location.reload(); }, 180);
     }catch(e){
@@ -3783,7 +3786,7 @@ if (btnDelSel){
         window.dispatchEvent(new Event('excelActualizado'));
         alert('Archivo Excel actualizado manualmente.');
       } else {
-        alert('No hay archivo Excel vinculado todavía. Usa “Elegir carpeta para guardar”.');
+        alert('No hay archivo Excel vinculado todavÃ­a. Usa â€œElegir carpeta para guardarâ€.');
       }
     }catch(e){ alert('No se pudo actualizar el Excel.'); }
   });
@@ -3791,7 +3794,7 @@ if (btnDelSel){
 </script>
 
 <script>
-/* ===== Cuentas por cobrar (módulo aislado) ===== */
+/* ===== Cuentas por cobrar (mÃ³dulo aislado) ===== */
 (() => {
   const KEY_CXC = 'cuentas_cobrar_v1';
   const KEY_CAJA = 'caja_tx_v6';
@@ -3856,8 +3859,8 @@ if (btnDelSel){
     tbody.innerHTML = filtered.map(acc => {
       const s = saldo(acc), ab = abonado(acc), paid = isPaid(acc);
       return `<tr>
-        <td><strong>${esc(acc.cliente)}</strong><div class="help">${esc(acc.telefono || '')}${acc.vehiculo ? ' · '+esc(acc.vehiculo) : ''}</div></td>
-        <td>${esc(acc.detalle || '')}<div class="help">Creada: ${esc(fmtDate(acc.createdAt))}${acc.fechaLimite ? ' · Límite: '+esc(acc.fechaLimite) : ''}</div></td>
+        <td><strong>${esc(acc.cliente)}</strong><div class="help">${esc(acc.telefono || '')}${acc.vehiculo ? ' Â· '+esc(acc.vehiculo) : ''}</div></td>
+        <td>${esc(acc.detalle || '')}<div class="help">Creada: ${esc(fmtDate(acc.createdAt))}${acc.fechaLimite ? ' Â· LÃ­mite: '+esc(acc.fechaLimite) : ''}</div></td>
         <td>${money(acc.total)}</td>
         <td>${money(ab)}</td>
         <td><strong>${money(s)}</strong></td>
@@ -3905,8 +3908,8 @@ if (btnDelSel){
     $('#cxcAbonoMonto').value = saldo(acc).toFixed(2);
     $('#cxcAbonoNota').value = '';
     const hist = $('#cxcHistorialAbonos');
-    hist.innerHTML = `<div class="help"><strong>${esc(acc.cliente)}</strong> · Saldo actual: <strong>${money(saldo(acc))}</strong></div>` +
-      ((acc.abonos||[]).slice().reverse().map(ab => `<div class="cxc-abono-row"><span class="cxc-abono-main">${esc(fmtDate(ab.ts))} · ${esc(ab.metodo)}${ab.banco ? ' / '+esc(ab.banco) : ''}${ab.nota ? ' · '+esc(ab.nota) : ''}</span><div class="cxc-abono-actions"><strong>${money(ab.monto)}</strong><button class="btn-outline" type="button" data-cxc-edit-abono="${esc(ab.id)}">Editar</button></div></div>`).join('') || '<div class="help">Sin abonos registrados.</div>');
+    hist.innerHTML = `<div class="help"><strong>${esc(acc.cliente)}</strong> Â· Saldo actual: <strong>${money(saldo(acc))}</strong></div>` +
+      ((acc.abonos||[]).slice().reverse().map(ab => `<div class="cxc-abono-row"><span class="cxc-abono-main">${esc(fmtDate(ab.ts))} Â· ${esc(ab.metodo)}${ab.banco ? ' / '+esc(ab.banco) : ''}${ab.nota ? ' Â· '+esc(ab.nota) : ''}</span><div class="cxc-abono-actions"><strong>${money(ab.monto)}</strong><button class="btn-outline" type="button" data-cxc-edit-abono="${esc(ab.id)}">Editar</button></div></div>`).join('') || '<div class="help">Sin abonos registrados.</div>');
     hist.querySelectorAll('[data-cxc-edit-abono]').forEach(btn => btn.addEventListener('click', () => abrirEditarAbono(acc.id, btn.dataset.cxcEditAbono)));
     toggleAbonoBanco();
   }
@@ -3915,8 +3918,8 @@ if (btnDelSel){
     const accounts = loadAccounts();
     const acc = accounts.find(a => a.id === id);
     if(!acc) return;
-    if((acc.abonos || []).length && !confirm('Esta cuenta tiene abonos registrados. Si la eliminas, NO se eliminarán las entradas ya registradas en caja. ¿Continuar?')) return;
-    if(!(acc.abonos || []).length && !confirm('¿Eliminar esta cuenta por cobrar?')) return;
+    if((acc.abonos || []).length && !confirm('Esta cuenta tiene abonos registrados. Si la eliminas, NO se eliminarÃ¡n las entradas ya registradas en caja. Â¿Continuar?')) return;
+    if(!(acc.abonos || []).length && !confirm('Â¿Eliminar esta cuenta por cobrar?')) return;
     saveAccounts(accounts.filter(a => a.id !== id));
     $('#cxcDetalleCuenta').style.display = 'none';
     render();
@@ -3924,7 +3927,7 @@ if (btnDelSel){
 
   function toggleAbonoBanco(){
     const metodo = $('#cxcAbonoMetodo')?.value || 'Efectivo';
-    const banco = $('#cxcAbonoBanco')?.value || 'Agrícola';
+    const banco = $('#cxcAbonoBanco')?.value || 'AgrÃ­cola';
     $('#cxcAbonoBancoWrap').style.display = metodo === 'Transferencia' ? 'block' : 'none';
     $('#cxcAbonoOtroBancoWrap').style.display = (metodo === 'Transferencia' && banco === 'Otros') ? 'block' : 'none';
   }
@@ -3970,7 +3973,7 @@ if (btnDelSel){
     saveCaja(caja);
 
     // No ocultar la cuenta cuando queda saldada.
-    // Antes se perdía visualmente porque el filtro podía estar en “Abiertas”.
+    // Antes se perdÃ­a visualmente porque el filtro podÃ­a estar en â€œAbiertasâ€.
     const filtroEstado = $('#cxcFiltroEstado');
     if(filtroEstado && isPaid(acc)) filtroEstado.value = 'todas';
 
@@ -3989,7 +3992,7 @@ if (btnDelSel){
   function abrirEditarAbono(cuentaId, abonoId){
     const acc = loadAccounts().find(a => a.id === cuentaId);
     const abono = acc?.abonos?.find(a => a.id === abonoId);
-    if(!acc || !abono){ alert('No se encontró el abono.'); return; }
+    if(!acc || !abono){ alert('No se encontrÃ³ el abono.'); return; }
     const partes = dateTimeParts(abono.ts);
     $('#cxcEditAbonoCuentaId').value = cuentaId;
     $('#cxcEditAbonoId').value = abonoId;
@@ -4010,7 +4013,7 @@ if (btnDelSel){
     const accounts = loadAccounts();
     const acc = accounts.find(a => a.id === cuentaId);
     const abono = acc?.abonos?.find(a => a.id === abonoId);
-    if(!acc || !abono){ alert('No se encontró el abono para editar.'); return; }
+    if(!acc || !abono){ alert('No se encontrÃ³ el abono para editar.'); return; }
     const monto = n($('#cxcEditAbonoMonto')?.value);
     const otrosAbonos = (acc.abonos || []).filter(a => a.id !== abonoId).reduce((sum,a)=>sum+n(a.monto),0);
     if(monto <= 0){ alert('El monto del abono debe ser mayor a cero.'); return; }
@@ -4044,7 +4047,7 @@ if (btnDelSel){
 
   function abrirEditarCuenta(id){
     const acc = getCuenta ? getCuenta(id) : loadAccounts().find(a => a.id === id);
-    if(!acc){ alert('No se encontró la cuenta.'); return; }
+    if(!acc){ alert('No se encontrÃ³ la cuenta.'); return; }
     $('#cxcEditId').value = acc.id || '';
     $('#cxcEditCliente').value = acc.cliente || '';
     $('#cxcEditTelefono').value = acc.telefono || '';
@@ -4063,7 +4066,7 @@ if (btnDelSel){
     const id = $('#cxcEditId')?.value || '';
     const accounts = loadAccounts();
     const acc = accounts.find(a => a.id === id);
-    if(!acc){ alert('No se encontró la cuenta para editar.'); return; }
+    if(!acc){ alert('No se encontrÃ³ la cuenta para editar.'); return; }
     const cliente = ($('#cxcEditCliente')?.value || '').trim();
     const telefono = ($('#cxcEditTelefono')?.value || '').trim();
     const vehiculo = ($('#cxcEditVehiculo')?.value || '').trim();
@@ -4073,8 +4076,8 @@ if (btnDelSel){
     const fechaCreacion = ($('#cxcEditFechaCreacion')?.value || '').trim();
     const horaCreacion = ($('#cxcEditHoraCreacion')?.value || '').trim();
     const yaAbonado = abonado(acc);
-    if(!cliente){ alert('El cliente no puede quedar vacío.'); return; }
-    if(!detalle){ alert('El detalle no puede quedar vacío.'); return; }
+    if(!cliente){ alert('El cliente no puede quedar vacÃ­o.'); return; }
+    if(!detalle){ alert('El detalle no puede quedar vacÃ­o.'); return; }
     if(total <= 0){ alert('El total de la cuenta debe ser mayor a cero.'); return; }
     if(total + 0.009 < yaAbonado){ alert('El total no puede ser menor que lo ya abonado: ' + money(yaAbonado)); return; }
     acc.cliente = cliente;
@@ -4122,48 +4125,48 @@ if (btnDelSel){
       <div class="estado-head">
         <div>
           <h2>Automotriz Medina</h2>
-          <div style="font-size:13px;color:#333;margin-top:4px">Estado de cuenta · Cuentas por cobrar</div>
+          <div style="font-size:13px;color:#333;margin-top:4px">Estado de cuenta Â· Cuentas por cobrar</div>
         </div>
         <div class="estado-meta">
-          <div><strong>Fecha de emisión:</strong> ${esc(fecha)}</div>
+          <div><strong>Fecha de emisiÃ³n:</strong> ${esc(fecha)}</div>
           <div><strong>ID cuenta:</strong> ${esc(acc.id)}</div>
           <div><strong>Estado:</strong> ${isPaid(acc) ? 'Saldada' : 'Abierta'}</div>
         </div>
       </div>
       <div style="font-size:14px;line-height:1.55">
         <div><strong>Cliente:</strong> ${esc(acc.cliente || '')}</div>
-        <div><strong>Teléfono:</strong> ${esc(acc.telefono || 'No registrado')}</div>
-        <div><strong>Vehículo:</strong> ${esc(acc.vehiculo || 'No registrado')}</div>
+        <div><strong>TelÃ©fono:</strong> ${esc(acc.telefono || 'No registrado')}</div>
+        <div><strong>VehÃ­culo:</strong> ${esc(acc.vehiculo || 'No registrado')}</div>
         <div><strong>Detalle:</strong> ${esc(acc.detalle || '')}</div>
-        ${acc.fechaLimite ? `<div><strong>Fecha límite:</strong> ${esc(acc.fechaLimite)}</div>` : ''}
+        ${acc.fechaLimite ? `<div><strong>Fecha lÃ­mite:</strong> ${esc(acc.fechaLimite)}</div>` : ''}
       </div>
       <div class="estado-grid">
         <div class="estado-box"><small>Total de la cuenta</small><strong>${money(acc.total)}</strong></div>
         <div class="estado-box"><small>Total abonado</small><strong>${money(totalAb)}</strong></div>
         <div class="estado-box"><small>Saldo pendiente</small><strong>${money(pendiente)}</strong></div>
-        <div class="estado-box"><small>Fecha de creación</small><strong>${esc(fmtDate(acc.createdAt) || '')}</strong></div>
+        <div class="estado-box"><small>Fecha de creaciÃ³n</small><strong>${esc(fmtDate(acc.createdAt) || '')}</strong></div>
       </div>
       <h3 style="margin-top:16px">Historial de abonos</h3>
       <table>
-        <thead><tr><th>#</th><th>Fecha</th><th>Método</th><th>Nota</th><th class="right">Monto</th></tr></thead>
+        <thead><tr><th>#</th><th>Fecha</th><th>MÃ©todo</th><th>Nota</th><th class="right">Monto</th></tr></thead>
         <tbody>${filas}</tbody>
       </table>
       <div class="estado-footer">
-        Este estado de cuenta fue generado desde el módulo de Cuentas por cobrar. Verificar saldos contra caja si hubo registros manuales externos.
+        Este estado de cuenta fue generado desde el mÃ³dulo de Cuentas por cobrar. Verificar saldos contra caja si hubo registros manuales externos.
       </div>`;
   }
 
   function estadoCuentaTextoWhatsApp(acc){
     const abonos = Array.isArray(acc.abonos) ? acc.abonos : [];
     const lineasAbonos = abonos.length
-      ? abonos.map((a,i)=>`${i+1}. ${fmtDate(a.ts)} · ${a.metodo}${a.banco ? ' / '+a.banco : ''} · ${money(a.monto)}`).join('\n')
+      ? abonos.map((a,i)=>`${i+1}. ${fmtDate(a.ts)} Â· ${a.metodo}${a.banco ? ' / '+a.banco : ''} Â· ${money(a.monto)}`).join('\n')
       : 'Sin abonos registrados.';
-    return `*Automotriz Medina*\n*Estado de cuenta*\n\nCliente: ${acc.cliente || ''}\nVehículo: ${acc.vehiculo || 'No registrado'}\nDetalle: ${acc.detalle || ''}\n\nTotal de cuenta: ${money(acc.total)}\nTotal abonado: ${money(abonado(acc))}\nSaldo pendiente: ${money(saldo(acc))}\nEstado: ${isPaid(acc) ? 'Saldada' : 'Abierta'}\n\n*Historial de abonos:*\n${lineasAbonos}\n\nEmitido: ${new Date().toLocaleString('es-SV',{dateStyle:'medium',timeStyle:'short'})}`;
+    return `*Automotriz Medina*\n*Estado de cuenta*\n\nCliente: ${acc.cliente || ''}\nVehÃ­culo: ${acc.vehiculo || 'No registrado'}\nDetalle: ${acc.detalle || ''}\n\nTotal de cuenta: ${money(acc.total)}\nTotal abonado: ${money(abonado(acc))}\nSaldo pendiente: ${money(saldo(acc))}\nEstado: ${isPaid(acc) ? 'Saldada' : 'Abierta'}\n\n*Historial de abonos:*\n${lineasAbonos}\n\nEmitido: ${new Date().toLocaleString('es-SV',{dateStyle:'medium',timeStyle:'short'})}`;
   }
 
   function abrirEstadoCuenta(id){
     const acc = getCuenta(id);
-    if(!acc){ alert('No se encontró la cuenta.'); return; }
+    if(!acc){ alert('No se encontrÃ³ la cuenta.'); return; }
     estadoCuentaActualId = id;
     const preview = $('#estadoCuentaPreview');
     if(preview) preview.innerHTML = estadoCuentaHTML(acc);
@@ -4176,7 +4179,7 @@ if (btnDelSel){
     if(!acc){ alert('Selecciona una cuenta.'); return; }
     const html = estadoCuentaHTML(acc);
     const w = window.open('', '_blank');
-    if(!w){ alert('El navegador bloqueó la ventana emergente. Permite ventanas emergentes para descargar el PDF.'); return; }
+    if(!w){ alert('El navegador bloqueÃ³ la ventana emergente. Permite ventanas emergentes para descargar el PDF.'); return; }
     w.document.open();
     w.document.write(`<!doctype html><html><head><meta charset="utf-8"><title>Estado de cuenta - ${esc(acc.cliente)}</title>
       <style>
@@ -4191,14 +4194,14 @@ if (btnDelSel){
     if(!acc){ alert('Selecciona una cuenta.'); return; }
     let phone = sanitizePhone(acc.telefono);
     if(!phone){
-      const nuevo = prompt('Este cliente no tiene teléfono guardado. Escribe el número de WhatsApp para poder continuar:');
+      const nuevo = prompt('Este cliente no tiene telÃ©fono guardado. Escribe el nÃºmero de WhatsApp para poder continuar:');
       phone = sanitizePhone(nuevo);
-      if(!phone){ alert('No se guardó ningún teléfono válido.'); return; }
+      if(!phone){ alert('No se guardÃ³ ningÃºn telÃ©fono vÃ¡lido.'); return; }
       acc.telefono = phone;
       saveAccounts(accounts);
       render();
     }
-    if(phone.length < 11){ alert('El número parece incompleto. Usa formato El Salvador o internacional.'); return; }
+    if(phone.length < 11){ alert('El nÃºmero parece incompleto. Usa formato El Salvador o internacional.'); return; }
     const text = encodeURIComponent(estadoCuentaTextoWhatsApp(acc));
     window.open(`https://wa.me/${phone}?text=${text}`, '_blank');
   }
@@ -4263,8 +4266,8 @@ if (btnDelSel){
   function eliminarEmpresa(nombre){
     if(DEFAULT_EMPRESAS.some(emp=>emp.toLowerCase()===String(nombre).toLowerCase())) return;
     const facturas=loadFacturas().filter(f=>String(f.empresa||'').toLowerCase()===String(nombre).toLowerCase());
-    if(facturas.length){ alert(`No se puede eliminar ${nombre} porque tiene ${facturas.length} factura(s) registrada(s). Primero cambia esas facturas de empresa o elimínalas.`); return; }
-    if(!confirm(`¿Eliminar la empresa ${nombre}?`)) return;
+    if(facturas.length){ alert(`No se puede eliminar ${nombre} porque tiene ${facturas.length} factura(s) registrada(s). Primero cambia esas facturas de empresa o elimÃ­nalas.`); return; }
+    if(!confirm(`Â¿Eliminar la empresa ${nombre}?`)) return;
     saveEmpresas(EMPRESAS.filter(emp=>emp.toLowerCase()!==String(nombre).toLowerCase()));
     syncEmpresaSelects(); if(empresaActual===nombre) empresaActual=TODAS; renderProveedores();
   }
@@ -4289,7 +4292,7 @@ if (btnDelSel){
     }));
     cont.innerHTML = cards.map(c=>{
       const custom=c.nombre!==TODAS && !DEFAULT_EMPRESAS.some(emp=>emp.toLowerCase()===String(c.nombre).toLowerCase());
-      return `<button type="button" class="prov-company ${c.nombre===vistaActual()?'active':''} ${custom?'has-delete':''}" data-prov-empresa="${esc(c.nombre)}"><strong>${esc(c.label)}</strong><span>${c.cant} pendientes · ${money(c.total)}</span>${custom?`<span role="button" tabindex="0" class="prov-company-delete" data-prov-del-company="${esc(c.nombre)}" title="Eliminar empresa">×</span>`:''}</button>`;
+      return `<button type="button" class="prov-company ${c.nombre===vistaActual()?'active':''} ${custom?'has-delete':''}" data-prov-empresa="${esc(c.nombre)}"><strong>${esc(c.label)}</strong><span>${c.cant} pendientes Â· ${money(c.total)}</span>${custom?`<span role="button" tabindex="0" class="prov-company-delete" data-prov-del-company="${esc(c.nombre)}" title="Eliminar empresa">Ã—</span>`:''}</button>`;
     }).join('');
     cont.querySelectorAll('[data-prov-empresa]').forEach(btn=>btn.addEventListener('click',()=>setVista(btn.dataset.provEmpresa)));
     cont.querySelectorAll('[data-prov-del-company]').forEach(btn=>{
@@ -4348,11 +4351,144 @@ if (btnDelSel){
   function guardarEdit(){ const id=$('#provEditId')?.value; const list=loadFacturas(); const idx=list.findIndex(f=>f.id===id); if(idx<0){ alert('No se encontro la factura.'); return; } const monto=Number($('#provEditMonto')?.value||0); if(!monto || monto<=0){ alert('Ingresa un monto valido.'); return; } let estado=$('#provEditEstado')?.value || 'Pendiente'; let fechaCancelacion=$('#provEditFechaCancelacion')?.value||''; let horaCancelacion=$('#provEditHoraCancelacion')?.value||''; if(estado==='Cancelada'){ if(!fechaCancelacion) fechaCancelacion=today(); if(!horaCancelacion) horaCancelacion=nowTime(); } else { fechaCancelacion=''; horaCancelacion=''; } Object.assign(list[idx], {dte:($('#provEditDte')?.value||'').trim(), empresa:$('#provEditEmpresa')?.value||EMPRESAS[0], fechaEmision:$('#provEditFechaEmision')?.value||'', monto, descripcion:($('#provEditDescripcion')?.value||'').trim(), estado, fechaCancelacion, horaCancelacion, updatedAt:new Date().toISOString()}); if(!list[idx].dte){ alert('Ingresa el DTE o identificador.'); return; } if(!list[idx].fechaEmision){ alert('Ingresa la fecha de emision.'); return; } saveFacturas(list); $('#dlgEditarFacturaProveedor')?.close(); setVista(list[idx].empresa); }
   function eliminarFactura(id){ const f=loadFacturas().find(x=>x.id===id); if(!f) return; if(!confirm(`Eliminar la factura ${f.dte}? Esta accion no afecta transacciones ya registradas en caja.`)) return; saveFacturas(loadFacturas().filter(x=>x.id!==id)); renderProveedores(); }
   function togglePagoBanco(){ const isTr = $('#provPagoMetodo')?.value === 'Transferencia'; if($('#provPagoBancoWrap')) $('#provPagoBancoWrap').style.display = isTr ? 'block' : 'none'; const isOther = isTr && $('#provPagoBanco')?.value === 'Otros'; if($('#provPagoOtroBancoWrap')) $('#provPagoOtroBancoWrap').style.display = isOther ? 'block' : 'none'; }
-  function abrirPago(ids){ const list=loadFacturas(); const facturas=list.filter(f=>ids.includes(f.id) && !isPaid(f)); if(!facturas.length){ alert('Selecciona al menos una factura pendiente.'); return; } pagoSeleccionActual = facturas.map(f=>f.id); const total=facturas.reduce((sum,f)=>sum+(Number(f.monto)||0),0); const resumen = facturas.map(f=>`${f.empresa} · ${f.dte} · ${money(f.monto)}`).join('<br>'); if($('#provPagoResumen')) $('#provPagoResumen').innerHTML = `<strong>${facturas.length} factura(s) seleccionada(s)</strong><br>${resumen}<br><br><strong>Total a pagar: ${money(total)}</strong>`; if($('#provPagoFecha')) $('#provPagoFecha').value=today(); if($('#provPagoHora')) $('#provPagoHora').value=nowTime(); if($('#provPagoMetodo')) $('#provPagoMetodo').value='Efectivo'; togglePagoBanco(); const dlg=$('#dlgPagarFacturasProveedor'); if(dlg){ if(typeof dlg.showModal==='function') dlg.showModal(); else dlg.setAttribute('open','open'); } }
-  function registrarSalidaCaja(facturas, metodo, banco){ const total=facturas.reduce((sum,f)=>sum+(Number(f.monto)||0),0); const empresas = [...new Set(facturas.map(f=>f.empresa))].join(', '); const dtes = facturas.map(f=>f.dte).join(', '); const txs=loadTx(); txs.push({ id: genTxId(), ts: new Date().toISOString(), desc: `Pago a proveedor: ${empresas} · Facturas: ${dtes}`, metodo, banco: metodo==='Transferencia' ? banco : '', tipo: 'Salida', monto: total, origen: 'Proveedores', proveedorFacturas: facturas.map(f=>f.id) }); saveTx(txs); }
+  function abrirPago(ids){ const list=loadFacturas(); const facturas=list.filter(f=>ids.includes(f.id) && !isPaid(f)); if(!facturas.length){ alert('Selecciona al menos una factura pendiente.'); return; } pagoSeleccionActual = facturas.map(f=>f.id); const total=facturas.reduce((sum,f)=>sum+(Number(f.monto)||0),0); const resumen = facturas.map(f=>`${f.empresa} Â· ${f.dte} Â· ${money(f.monto)}`).join('<br>'); if($('#provPagoResumen')) $('#provPagoResumen').innerHTML = `<strong>${facturas.length} factura(s) seleccionada(s)</strong><br>${resumen}<br><br><strong>Total a pagar: ${money(total)}</strong>`; if($('#provPagoFecha')) $('#provPagoFecha').value=today(); if($('#provPagoHora')) $('#provPagoHora').value=nowTime(); if($('#provPagoMetodo')) $('#provPagoMetodo').value='Efectivo'; togglePagoBanco(); const dlg=$('#dlgPagarFacturasProveedor'); if(dlg){ if(typeof dlg.showModal==='function') dlg.showModal(); else dlg.setAttribute('open','open'); } }
+  function registrarSalidaCaja(facturas, metodo, banco){ const total=facturas.reduce((sum,f)=>sum+(Number(f.monto)||0),0); const empresas = [...new Set(facturas.map(f=>f.empresa))].join(', '); const dtes = facturas.map(f=>f.dte).join(', '); const txs=loadTx(); txs.push({ id: genTxId(), ts: new Date().toISOString(), desc: `Pago a proveedor: ${empresas} Â· Facturas: ${dtes}`, metodo, banco: metodo==='Transferencia' ? banco : '', tipo: 'Salida', monto: total, origen: 'Proveedores', proveedorFacturas: facturas.map(f=>f.id) }); saveTx(txs); }
   function confirmarPago(){ const list=loadFacturas(); const facturas=list.filter(f=>pagoSeleccionActual.includes(f.id) && !isPaid(f)); if(!facturas.length){ alert('No hay facturas pendientes para pagar.'); return; } const metodo=$('#provPagoMetodo')?.value || 'Efectivo'; let banco=''; if(metodo==='Transferencia'){ banco=$('#provPagoBanco')?.value || ''; if(banco==='Otros') banco=($('#provPagoOtroBanco')?.value||'').trim(); if(!banco){ alert('Ingresa el banco o financiera.'); return; } } const fecha=$('#provPagoFecha')?.value || today(); const hora=$('#provPagoHora')?.value || nowTime(); const total=facturas.reduce((sum,f)=>sum+(Number(f.monto)||0),0); if(!confirm(`Confirmar pago de ${facturas.length} factura(s) por ${money(total)} y registrar una salida en caja?`)) return; const ids = facturas.map(f=>f.id); list.forEach(f=>{ if(ids.includes(f.id)){ f.estado='Cancelada'; f.fechaCancelacion=fecha; f.horaCancelacion=hora; f.updatedAt=new Date().toISOString(); } }); saveFacturas(list); registrarSalidaCaja(facturas, metodo, banco); $('#dlgPagarFacturasProveedor')?.close(); pagoSeleccionActual=[]; renderProveedores(); alert('Pago registrado. Se creo una salida en el modulo principal de caja.'); }
   function initProveedores(){ const btn=$('#btnProveedores'), dlg=$('#dlgProveedores'); if(!btn||!dlg) return; if($('#provFechaEmision')) $('#provFechaEmision').value=today(); btn.addEventListener('click',()=>{ renderProveedores(); if(typeof dlg.showModal==='function') dlg.showModal(); else dlg.setAttribute('open','open'); }); $('#closeProveedores')?.addEventListener('click',()=>dlg.close()); $('#provEstado')?.addEventListener('change',()=>toggleCancelFields('prov')); $('#provEditEstado')?.addEventListener('change',()=>toggleCancelFields('provEdit')); $('#btnProvGuardarFactura')?.addEventListener('click',guardarFactura); $('#btnProvAgregarEmpresa')?.addEventListener('click',agregarEmpresa); $('#provNuevaEmpresa')?.addEventListener('keydown',(e)=>{ if(e.key==='Enter'){ e.preventDefault(); agregarEmpresa(); } }); $('#provBuscar')?.addEventListener('input',renderProveedores); $('#provFiltroEstado')?.addEventListener('change',renderProveedores); $('#provFiltroFecha')?.addEventListener('change',()=>{ toggleFiltroFecha(); renderProveedores(); }); $('#provFiltroMes')?.addEventListener('change',renderProveedores); $('#provFechaDesde')?.addEventListener('change',renderProveedores); $('#provFechaHasta')?.addEventListener('change',renderProveedores); $('#provChkAll')?.addEventListener('change',(e)=>{ document.querySelectorAll('.prov-row-check').forEach(ch=>{ ch.checked=e.target.checked; }); actualizarSeleccion(); }); $('#btnProvPagarSeleccionadas')?.addEventListener('click',()=>abrirPago(selectedIds())); $('#closeEditarFacturaProveedor')?.addEventListener('click',()=>$('#dlgEditarFacturaProveedor')?.close()); $('#btnProvCancelarEdit')?.addEventListener('click',()=>$('#dlgEditarFacturaProveedor')?.close()); $('#btnProvGuardarEdit')?.addEventListener('click',guardarEdit); $('#closePagarFacturasProveedor')?.addEventListener('click',()=>$('#dlgPagarFacturasProveedor')?.close()); $('#btnProvCancelarPago')?.addEventListener('click',()=>$('#dlgPagarFacturasProveedor')?.close()); $('#provPagoMetodo')?.addEventListener('change',togglePagoBanco); $('#provPagoBanco')?.addEventListener('change',togglePagoBanco); $('#btnProvConfirmarPago')?.addEventListener('click',confirmarPago); toggleCancelFields('prov'); toggleFiltroFecha(); }
   if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',initProveedores); else initProveedores();
+})();
+</script>
+
+<script>
+/* ===== SincronizaciÃ³n Google Sheets / Caja MÃ¡ster ===== */
+(() => {
+  const CLOUD_WEBAPP_URL = 'https://script.google.com/macros/s/AKfycby79bxEvn2xrh1bsa3n__njbMNwj0-H7NzvYhG5R6ZrnGtugledMAjy8aNL6KcLi91orA/exec';
+  const CLOUD_KEYS = [
+    'caja_tx_v6',
+    'empleados_v1',
+    'cuentas_cobrar_v1',
+    'caja_proveedores_facturas_v1',
+    'caja_proveedores_empresas_v1'
+  ];
+  const $ = (s) => document.querySelector(s);
+  let syncTimer = null;
+  let syncing = false;
+
+  function setCloudStatus(text){
+    const el = $('#googleSheetStatus');
+    if(el) el.textContent = text || '';
+  }
+  function readDataset(key){
+    try{
+      const raw = localStorage.getItem(key);
+      const data = raw ? JSON.parse(raw) : [];
+      return Array.isArray(data) ? data : [];
+    }catch(_e){
+      return [];
+    }
+  }
+  function collectDatasets(){
+    const datasets = {};
+    CLOUD_KEYS.forEach(key => datasets[key] = readDataset(key));
+    return datasets;
+  }
+  async function saveCloud(manual=false){
+    if(syncing) return;
+    syncing = true;
+    if(manual) setCloudStatus('Guardando en Google Sheet...');
+    try{
+      await fetch(CLOUD_WEBAPP_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        body: JSON.stringify({
+          origin: 'Caja MÃ¡ster',
+          version: 'github-pages',
+          updatedAt: new Date().toISOString(),
+          datasets: collectDatasets()
+        })
+      });
+      localStorage.setItem('ultima_sincronizacion_google_sheet', new Date().toISOString());
+      setCloudStatus('Google Sheet actualizado.');
+      setTimeout(()=>setCloudStatus(''), 3500);
+    }catch(err){
+      console.warn('No se pudo sincronizar Google Sheet', err);
+      setCloudStatus('No se pudo sincronizar Google Sheet.');
+    }finally{
+      syncing = false;
+    }
+  }
+  function scheduleCloudSave(){
+    clearTimeout(syncTimer);
+    syncTimer = setTimeout(()=>saveCloud(false), 1800);
+  }
+  function loadCloudJsonp(){
+    return new Promise((resolve, reject)=>{
+      const cb = '__cajaMasterCloud_' + Date.now() + '_' + Math.floor(Math.random()*9999);
+      const script = document.createElement('script');
+      const timer = setTimeout(()=>{
+        cleanup();
+        reject(new Error('Tiempo agotado al cargar Google Sheet'));
+      }, 20000);
+      function cleanup(){
+        clearTimeout(timer);
+        delete window[cb];
+        script.remove();
+      }
+      window[cb] = (payload)=>{
+        cleanup();
+        resolve(payload);
+      };
+      script.onerror = ()=>{
+        cleanup();
+        reject(new Error('No se pudo conectar con Google Sheet'));
+      };
+      script.src = CLOUD_WEBAPP_URL + '?action=load&callback=' + encodeURIComponent(cb) + '&_=' + Date.now();
+      document.body.appendChild(script);
+    });
+  }
+  async function loadCloud(manual=false){
+    if(manual && !confirm('Cargar desde Google Sheet reemplazarÃ¡ los datos actuales de este navegador. Â¿Continuar?')) return;
+    setCloudStatus('Cargando Google Sheet...');
+    try{
+      const payload = await loadCloudJsonp();
+      if(!payload || !payload.ok || !payload.datasets) throw new Error(payload && payload.error ? payload.error : 'Respuesta invÃ¡lida');
+      CLOUD_KEYS.forEach(key=>{
+        const list = Array.isArray(payload.datasets[key]) ? payload.datasets[key] : [];
+        localStorage.setItem(key, JSON.stringify(list));
+      });
+      localStorage.setItem('ultima_carga_google_sheet', new Date().toISOString());
+      setCloudStatus('Datos cargados desde Google Sheet. Actualizando...');
+      window.dispatchEvent(new Event('excelActualizado'));
+      setTimeout(()=>location.reload(), 700);
+    }catch(err){
+      console.warn('No se pudo cargar Google Sheet', err);
+      setCloudStatus('No se pudo cargar Google Sheet.');
+    }
+  }
+  function maybeOfferInitialCloudLoad(){
+    const hasLocal = CLOUD_KEYS.some(key => readDataset(key).length > 0);
+    if(hasLocal || sessionStorage.getItem('caja_cloud_load_checked')) return;
+    sessionStorage.setItem('caja_cloud_load_checked','1');
+    loadCloudJsonp().then(payload=>{
+      const hasCloud = payload && payload.ok && payload.datasets && CLOUD_KEYS.some(key => Array.isArray(payload.datasets[key]) && payload.datasets[key].length);
+      if(hasCloud && confirm('Hay datos guardados en Google Sheet. Â¿Deseas cargarlos ahora?')){
+        CLOUD_KEYS.forEach(key=>localStorage.setItem(key, JSON.stringify(payload.datasets[key] || [])));
+        location.reload();
+      }
+    }).catch(()=>{});
+  }
+  function initCloudSync(){
+    $('#btnGuardarGoogleSheet')?.addEventListener('click', ()=>saveCloud(true));
+    $('#btnCargarGoogleSheet')?.addEventListener('click', ()=>loadCloud(true));
+    const originalSetItem = localStorage.setItem.bind(localStorage);
+    localStorage.setItem = function(key, value){
+      originalSetItem(key, value);
+      if(CLOUD_KEYS.includes(key)) scheduleCloudSave();
+    };
+    maybeOfferInitialCloudLoad();
+  }
+  if(document.readyState === 'loading') document.addEventListener('DOMContentLoaded', initCloudSync);
+  else initCloudSync();
 })();
 </script>
 
