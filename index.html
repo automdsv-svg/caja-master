@@ -4373,6 +4373,7 @@ if (btnDelSel){
   const $ = (s) => document.querySelector(s);
   let syncTimer = null;
   let syncing = false;
+  let applyingCloud = false;
 
   function setCloudStatus(text){
     const el = $('#googleSheetStatus');
@@ -4396,11 +4397,55 @@ if (btnDelSel){
     return !!datasets && CLOUD_KEYS.some(key => Array.isArray(datasets[key]) && datasets[key].length > 0);
   }
   function applyCloudPayload(payload){
-    CLOUD_KEYS.forEach(key=>{
-      const list = Array.isArray(payload.datasets[key]) ? payload.datasets[key] : [];
-      localStorage.setItem(key, JSON.stringify(list));
+    applyingCloud = true;
+    try{
+      CLOUD_KEYS.forEach(key=>{
+        const list = Array.isArray(payload.datasets[key]) ? payload.datasets[key] : [];
+        localStorage.setItem(key, JSON.stringify(list));
+      });
+      localStorage.setItem('ultima_carga_google_sheet', new Date().toISOString());
+    }finally{
+      applyingCloud = false;
+    }
+  }
+  function notifyDataChanged(){
+    try{ window.dispatchEvent(new Event('datosCajaActualizados')); }catch(_e){}
+    try{ window.dispatchEvent(new Event('storage')); }catch(_e){}
+    try{ window.dispatchEvent(new Event('excelActualizado')); }catch(_e){}
+  }
+  function postCloudForm(body){
+    return new Promise((resolve, reject)=>{
+      const frameName = 'cajaCloudSave_' + Date.now() + '_' + Math.floor(Math.random()*9999);
+      const iframe = document.createElement('iframe');
+      const form = document.createElement('form');
+      const input = document.createElement('input');
+      const timer = setTimeout(()=>{
+        cleanup();
+        reject(new Error('Tiempo agotado al guardar Google Sheet'));
+      }, 25000);
+      function cleanup(){
+        clearTimeout(timer);
+        form.remove();
+        setTimeout(()=>iframe.remove(), 300);
+      }
+      iframe.name = frameName;
+      iframe.style.display = 'none';
+      iframe.onload = ()=>{
+        cleanup();
+        resolve(true);
+      };
+      form.method = 'POST';
+      form.action = CLOUD_WEBAPP_URL;
+      form.target = frameName;
+      form.style.display = 'none';
+      input.type = 'hidden';
+      input.name = 'payload';
+      input.value = body;
+      form.appendChild(input);
+      document.body.appendChild(iframe);
+      document.body.appendChild(form);
+      form.submit();
     });
-    localStorage.setItem('ultima_carga_google_sheet', new Date().toISOString());
   }
   async function saveCloud(manual=false){
     if(syncing) return;
@@ -4413,12 +4458,7 @@ if (btnDelSel){
         updatedAt: new Date().toISOString(),
         datasets: collectDatasets()
       });
-      await fetch(CLOUD_WEBAPP_URL, {
-        method: 'POST',
-        mode: 'no-cors',
-        headers: {'Content-Type':'text/plain;charset=utf-8'},
-        body
-      });
+      await postCloudForm(body);
       localStorage.setItem('ultima_sincronizacion_google_sheet', new Date().toISOString());
       setCloudStatus('Google Sheet actualizado.');
       setTimeout(()=>setCloudStatus(''), 3500);
@@ -4432,6 +4472,7 @@ if (btnDelSel){
     }
   }
   function scheduleCloudSave(){
+    if(applyingCloud) return;
     clearTimeout(syncTimer);
     syncTimer = setTimeout(()=>saveCloud(false), 1800);
   }
@@ -4499,7 +4540,7 @@ if (btnDelSel){
       if(!payload || !payload.ok || !payload.datasets) throw new Error(payload && payload.error ? payload.error : 'Respuesta inválida');
       applyCloudPayload(payload);
       setCloudStatus('Datos cargados desde Google Sheet.');
-      window.dispatchEvent(new Event('excelActualizado'));
+      notifyDataChanged();
       if(manual) setTimeout(()=>location.reload(), 700);
       else setTimeout(()=>setCloudStatus(''), 2500);
       return true;
@@ -4510,8 +4551,6 @@ if (btnDelSel){
     }
   }
   function initialCloudHandshake(){
-    if(sessionStorage.getItem('caja_cloud_load_checked')) return;
-    sessionStorage.setItem('caja_cloud_load_checked','1');
     const localDatasets = collectDatasets();
     const hasLocal = hasAnyDataset(localDatasets);
     setCloudStatus('Leyendo Google Sheet...');
@@ -4520,7 +4559,7 @@ if (btnDelSel){
       if(hasCloud){
         applyCloudPayload(payload);
         setCloudStatus('Google Sheet cargado automáticamente.');
-        window.dispatchEvent(new Event('excelActualizado'));
+        notifyDataChanged();
         setTimeout(()=>setCloudStatus(''), 2500);
         return;
       }
@@ -4531,7 +4570,6 @@ if (btnDelSel){
       setCloudStatus('');
     }).catch((err)=>{
       console.warn('No se pudo leer Google Sheet al iniciar', err);
-      if(hasLocal) scheduleCloudSave();
       setCloudStatus('No se pudo leer Google Sheet automáticamente.');
     });
   }
