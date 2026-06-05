@@ -4374,6 +4374,8 @@ if (btnDelSel){
   let syncTimer = null;
   let syncing = false;
   let applyingCloud = false;
+  let cloudReady = false;
+  let pendingCloudSave = false;
 
   function setCloudStatus(text){
     const el = $('#googleSheetStatus');
@@ -4421,8 +4423,8 @@ if (btnDelSel){
       const input = document.createElement('input');
       const timer = setTimeout(()=>{
         cleanup();
-        reject(new Error('Tiempo agotado al guardar Google Sheet'));
-      }, 25000);
+        resolve(true);
+      }, 12000);
       function cleanup(){
         clearTimeout(timer);
         form.remove();
@@ -4430,10 +4432,6 @@ if (btnDelSel){
       }
       iframe.name = frameName;
       iframe.style.display = 'none';
-      iframe.onload = ()=>{
-        cleanup();
-        resolve(true);
-      };
       form.method = 'POST';
       form.action = CLOUD_WEBAPP_URL;
       form.target = frameName;
@@ -4444,10 +4442,21 @@ if (btnDelSel){
       form.appendChild(input);
       document.body.appendChild(iframe);
       document.body.appendChild(form);
+      try{
+        if(navigator.sendBeacon){
+          const blob = new Blob([body], {type:'text/plain;charset=UTF-8'});
+          navigator.sendBeacon(CLOUD_WEBAPP_URL, blob);
+        }
+      }catch(_e){}
       form.submit();
     });
   }
   async function saveCloud(manual=false){
+    if(!cloudReady && !manual){
+      pendingCloudSave = true;
+      setCloudStatus('Esperando lectura de Google Sheet...');
+      return false;
+    }
     if(syncing) return;
     syncing = true;
     if(manual) setCloudStatus('Guardando en Google Sheet...');
@@ -4473,6 +4482,10 @@ if (btnDelSel){
   }
   function scheduleCloudSave(){
     if(applyingCloud) return;
+    if(!cloudReady){
+      pendingCloudSave = true;
+      return;
+    }
     clearTimeout(syncTimer);
     syncTimer = setTimeout(()=>saveCloud(false), 1800);
   }
@@ -4527,9 +4540,9 @@ if (btnDelSel){
   }
   async function loadCloudRemote(){
     try{
-      return await loadCloudBridge();
-    }catch(_bridgeErr){
       return await loadCloudJsonp();
+    }catch(_jsonpErr){
+      return await loadCloudBridge();
     }
   }
   async function loadCloud(manual=false){
@@ -4539,6 +4552,8 @@ if (btnDelSel){
       const payload = await loadCloudRemote();
       if(!payload || !payload.ok || !payload.datasets) throw new Error(payload && payload.error ? payload.error : 'Respuesta inválida');
       applyCloudPayload(payload);
+      cloudReady = true;
+      pendingCloudSave = false;
       setCloudStatus('Datos cargados desde Google Sheet.');
       notifyDataChanged();
       if(manual) setTimeout(()=>location.reload(), 700);
@@ -4558,18 +4573,24 @@ if (btnDelSel){
       const hasCloud = payload && payload.ok && payload.datasets && hasAnyDataset(payload.datasets);
       if(hasCloud){
         applyCloudPayload(payload);
+        cloudReady = true;
+        pendingCloudSave = false;
         setCloudStatus('Google Sheet cargado automáticamente.');
         notifyDataChanged();
         setTimeout(()=>setCloudStatus(''), 2500);
         return;
       }
       if(hasLocal && !hasCloud){
+        cloudReady = true;
         saveCloud(false);
         return;
       }
+      cloudReady = true;
+      if(pendingCloudSave) saveCloud(false);
       setCloudStatus('');
     }).catch((err)=>{
       console.warn('No se pudo leer Google Sheet al iniciar', err);
+      cloudReady = false;
       setCloudStatus('No se pudo leer Google Sheet automáticamente.');
     });
   }
