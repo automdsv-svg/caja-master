@@ -4460,19 +4460,53 @@ if (btnDelSel){
       document.body.appendChild(script);
     });
   }
+  function loadCloudBridge(){
+    return new Promise((resolve, reject)=>{
+      const iframe = document.createElement('iframe');
+      const timer = setTimeout(()=>{
+        cleanup();
+        reject(new Error('Tiempo agotado al cargar el puente de Google Sheet'));
+      }, 18000);
+      function cleanup(){
+        clearTimeout(timer);
+        window.removeEventListener('message', onMessage);
+        iframe.remove();
+      }
+      function onMessage(event){
+        const data = event && event.data;
+        if(!data || data.source !== 'caja-master-google-sheet') return;
+        cleanup();
+        resolve(data.payload);
+      }
+      window.addEventListener('message', onMessage);
+      iframe.style.display = 'none';
+      iframe.src = CLOUD_WEBAPP_URL + '?action=bridge&_=' + Date.now();
+      document.body.appendChild(iframe);
+    });
+  }
+  async function loadCloudRemote(){
+    try{
+      return await loadCloudBridge();
+    }catch(_bridgeErr){
+      return await loadCloudJsonp();
+    }
+  }
   async function loadCloud(manual=false){
     if(manual && !confirm('Cargar desde Google Sheet reemplazará los datos actuales de este navegador. ¿Continuar?')) return;
     setCloudStatus('Cargando Google Sheet...');
     try{
-      const payload = await loadCloudJsonp();
+      const payload = await loadCloudRemote();
       if(!payload || !payload.ok || !payload.datasets) throw new Error(payload && payload.error ? payload.error : 'Respuesta inválida');
       applyCloudPayload(payload);
-      setCloudStatus('Datos cargados desde Google Sheet. Actualizando...');
+      setCloudStatus('Datos cargados desde Google Sheet.');
       window.dispatchEvent(new Event('excelActualizado'));
-      setTimeout(()=>location.reload(), 700);
+      if(manual) setTimeout(()=>location.reload(), 700);
+      else setTimeout(()=>setCloudStatus(''), 2500);
+      return true;
     }catch(err){
       console.warn('No se pudo cargar Google Sheet', err);
-      setCloudStatus('No se pudo cargar Google Sheet.');
+      setCloudStatus('No se pudo cargar Google Sheet: ' + (err && err.message ? err.message : 'revisa la conexión.'));
+      return false;
     }
   }
   function initialCloudHandshake(){
@@ -4480,17 +4514,26 @@ if (btnDelSel){
     sessionStorage.setItem('caja_cloud_load_checked','1');
     const localDatasets = collectDatasets();
     const hasLocal = hasAnyDataset(localDatasets);
-    loadCloudJsonp().then(payload=>{
+    setCloudStatus('Leyendo Google Sheet...');
+    loadCloudRemote().then(payload=>{
       const hasCloud = payload && payload.ok && payload.datasets && hasAnyDataset(payload.datasets);
-      if(!hasLocal && hasCloud && confirm('Hay datos guardados en Google Sheet. ¿Deseas cargarlos ahora?')){
+      if(hasCloud){
         applyCloudPayload(payload);
-        location.reload();
+        setCloudStatus('Google Sheet cargado automáticamente.');
+        window.dispatchEvent(new Event('excelActualizado'));
+        setTimeout(()=>setCloudStatus(''), 2500);
         return;
       }
       if(hasLocal && !hasCloud){
         saveCloud(false);
+        return;
       }
-    }).catch(()=>{});
+      setCloudStatus('');
+    }).catch((err)=>{
+      console.warn('No se pudo leer Google Sheet al iniciar', err);
+      if(hasLocal) scheduleCloudSave();
+      setCloudStatus('No se pudo leer Google Sheet automáticamente.');
+    });
   }
   function initCloudSync(){
     $('#btnGuardarGoogleSheet')?.addEventListener('click', ()=>saveCloud(true));
