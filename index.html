@@ -4415,7 +4415,7 @@ if (btnDelSel){
     try{ window.dispatchEvent(new Event('storage')); }catch(_e){}
     try{ window.dispatchEvent(new Event('excelActualizado')); }catch(_e){}
   }
-  function postCloudForm(body){
+  function postCloudForm(body, syncId){
     return new Promise((resolve, reject)=>{
       const frameName = 'cajaCloudSave_' + Date.now() + '_' + Math.floor(Math.random()*9999);
       const iframe = document.createElement('iframe');
@@ -4423,13 +4423,24 @@ if (btnDelSel){
       const input = document.createElement('input');
       const timer = setTimeout(()=>{
         cleanup();
-        resolve(true);
-      }, 12000);
+        reject(new Error('Google Sheet no confirmó el guardado.'));
+      }, 25000);
       function cleanup(){
         clearTimeout(timer);
+        window.removeEventListener('message', onMessage);
         form.remove();
         setTimeout(()=>iframe.remove(), 300);
       }
+      function onMessage(event){
+        const data = event && event.data;
+        if(!data || data.source !== 'caja-master-google-sheet-save') return;
+        const payload = data.payload || {};
+        if(syncId && payload.syncId && payload.syncId !== syncId) return;
+        cleanup();
+        if(payload.ok) resolve(payload);
+        else reject(new Error(payload.error || 'Google Sheet rechazó el guardado.'));
+      }
+      window.addEventListener('message', onMessage);
       iframe.name = frameName;
       iframe.style.display = 'none';
       form.method = 'POST';
@@ -4442,12 +4453,6 @@ if (btnDelSel){
       form.appendChild(input);
       document.body.appendChild(iframe);
       document.body.appendChild(form);
-      try{
-        if(navigator.sendBeacon){
-          const blob = new Blob([body], {type:'text/plain;charset=UTF-8'});
-          navigator.sendBeacon(CLOUD_WEBAPP_URL, blob);
-        }
-      }catch(_e){}
       form.submit();
     });
   }
@@ -4461,13 +4466,15 @@ if (btnDelSel){
     syncing = true;
     if(manual) setCloudStatus('Guardando en Google Sheet...');
     try{
+      const syncId = 'sync_' + Date.now() + '_' + Math.floor(Math.random()*999999);
       const body = JSON.stringify({
+        syncId,
         origin: 'Caja Máster',
         version: 'github-pages',
         updatedAt: new Date().toISOString(),
         datasets: collectDatasets()
       });
-      await postCloudForm(body);
+      await postCloudForm(body, syncId);
       localStorage.setItem('ultima_sincronizacion_google_sheet', new Date().toISOString());
       setCloudStatus('Google Sheet actualizado.');
       setTimeout(()=>setCloudStatus(''), 3500);
