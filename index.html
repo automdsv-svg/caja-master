@@ -4618,3 +4618,24 @@ if (btnDelSel){
 
 </body>
 </html>
+
+<script>
+/* GS_PATCH_V2 - sincronizacion Google Sheet */
+(()=>{const URL='https://script.google.com/macros/s/AKfycby79bxEvn2xrh1bsa3n__njbMNwj0-H7NzvYhG5R6ZrnGtugledMAjy8aNL6KcLi91orA/exec';
+const KEYS=['caja_tx_v6','empleados_v1','cuentas_cobrar_v1','caja_proveedores_facturas_v1','caja_proveedores_empresas_v1'];
+let ready=false,applying=false,timer=null,saving=false,pending=false;
+const $=s=>document.querySelector(s);
+function st(t){const e=$('#googleSheetStatus'); if(e)e.textContent=t||'';}
+function arr(k){try{const v=JSON.parse(localStorage.getItem(k)||'[]');return Array.isArray(v)?v:[]}catch(e){return[]}}
+function data(){const d={};KEYS.forEach(k=>d[k]=arr(k));return d}
+function any(d){return d&&KEYS.some(k=>Array.isArray(d[k])&&d[k].length)}
+function apply(p){applying=true;try{KEYS.forEach(k=>localStorage.setItem(k,JSON.stringify(Array.isArray(p.datasets[k])?p.datasets[k]:[])));localStorage.setItem('ultima_carga_google_sheet',new Date().toISOString())}finally{applying=false}}
+function refresh(){['datosCajaActualizados','storage','excelActualizado'].forEach(n=>{try{window.dispatchEvent(new Event(n))}catch(e){}})}
+function load(){return new Promise((ok,fail)=>{const cb='__gs_'+Date.now()+'_'+Math.floor(Math.random()*9999),s=document.createElement('script'),to=setTimeout(()=>{clean();fail(Error('Tiempo agotado al leer Google Sheet'))},22000);function clean(){clearTimeout(to);delete window[cb];s.remove()}window[cb]=p=>{clean();ok(p)};s.onerror=()=>{clean();fail(Error('No se pudo conectar con Google Sheet'))};s.src=URL+'?action=load&callback='+encodeURIComponent(cb)+'&_='+Date.now();document.body.appendChild(s)})}
+function post(body,id){return new Promise((ok,fail)=>{const frame='gs_save_'+Date.now(),ifr=document.createElement('iframe'),f=document.createElement('form'),i=document.createElement('input'),to=setTimeout(()=>{clean();fail(Error('Google Sheet no confirmo el guardado'))},26000);function clean(){clearTimeout(to);window.removeEventListener('message',msg);f.remove();setTimeout(()=>ifr.remove(),300)}function msg(ev){const d=ev&&ev.data;if(!d||d.source!=='caja-master-google-sheet-save')return;const p=d.payload||{};if(p.syncId&&p.syncId!==id)return;clean();p.ok?ok(p):fail(Error(p.error||'Google Sheet rechazo el guardado'))}window.addEventListener('message',msg);ifr.name=frame;ifr.style.display='none';f.method='POST';f.action=URL;f.target=frame;f.style.display='none';i.type='hidden';i.name='payload';i.value=body;f.appendChild(i);document.body.appendChild(ifr);document.body.appendChild(f);f.submit()})}
+async function save(manual=false){if(!ready&&!manual){pending=true;st('Esperando lectura de Google Sheet...');return}if(saving)return;saving=true;if(manual)st('Guardando en Google Sheet...');try{const syncId='sync_'+Date.now();await post(JSON.stringify({syncId,origin:'Caja Master',version:'GS_PATCH_V2',updatedAt:new Date().toISOString(),datasets:data()}),syncId);localStorage.setItem('ultima_sincronizacion_google_sheet',new Date().toISOString());st('Google Sheet actualizado.');setTimeout(()=>st(''),3500)}catch(e){console.warn(e);st('No se pudo guardar Google Sheet: '+(e.message||e))}finally{saving=false}}
+function schedule(){if(applying)return;if(!ready){pending=true;return}clearTimeout(timer);timer=setTimeout(()=>save(false),1800)}
+async function start(){document.getElementById('btnGuardarGoogleSheet')?.addEventListener('click',()=>save(true));document.getElementById('btnCargarGoogleSheet')?.addEventListener('click',async()=>{if(!confirm('Cargar desde Google Sheet reemplazara los datos actuales. Continuar?'))return;st('Cargando Google Sheet...');try{const p=await load();if(!p||!p.ok||!p.datasets)throw Error('Respuesta invalida');apply(p);ready=true;pending=false;st('Datos cargados desde Google Sheet.');refresh();setTimeout(()=>location.reload(),700)}catch(e){st('No se pudo cargar Google Sheet: '+(e.message||e))}});const old=localStorage.setItem.bind(localStorage);localStorage.setItem=function(k,v){old(k,v);if(KEYS.includes(k))schedule()};st('Leyendo Google Sheet...');try{const local=data(),p=await load(),hasCloud=p&&p.ok&&p.datasets&&any(p.datasets);if(hasCloud){apply(p);ready=true;pending=false;st('Google Sheet cargado automaticamente.');refresh();setTimeout(()=>st(''),2500)}else{ready=true;if(any(local))save(false);else st('')}}catch(e){ready=false;st('No se pudo leer Google Sheet automaticamente.')}} 
+if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',start);else start();
+})();
+</script>
