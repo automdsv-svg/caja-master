@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="utf-8" />
@@ -4620,22 +4620,25 @@ if (btnDelSel){
 </html>
 
 <script>
-/* GS_PATCH_V4_CLOUD_FIRST - Google Sheet manda; evita datos viejos del navegador */
+/* GS_PATCH_V5_CHROME_BRIDGE - Google Sheet manda; lectura por iframe para Chrome */
 (()=>{const URL='https://script.google.com/macros/s/AKfycby79bxEvn2xrh1bsa3n__njbMNwj0-H7NzvYhG5R6ZrnGtugledMAjy8aNL6KcLi91orA/exec';
 const KEYS=['caja_tx_v6','empleados_v1','cuentas_cobrar_v1','caja_proveedores_facturas_v1','caja_proveedores_empresas_v1'];
-const READY='gs_cloud_ready_v4';let applying=false,timer=null;
+const READY='gs_cloud_ready_v5';let applying=false,timer=null;
 const $=s=>document.querySelector(s);function st(t){const e=$('#googleSheetStatus');if(e)e.textContent=t||''}
 function fire(){['datosCajaActualizados','storage','excelActualizado'].forEach(n=>{try{window.dispatchEvent(new Event(n))}catch(e){}})}
-function removeLocal(){KEYS.forEach(k=>{try{localStorage.removeItem(k)}catch(e){}});try{localStorage.removeItem(READY)}catch(e){}}
+function removeLocal(){KEYS.forEach(k=>{try{localStorage.removeItem(k)}catch(e){}});try{localStorage.removeItem(READY);localStorage.removeItem('gs_cloud_ready_v4')}catch(e){}}
 function read(k){try{const v=JSON.parse(localStorage.getItem(k)||'[]');return Array.isArray(v)?v:[]}catch(e){return[]}}
 function collect(){const d={};KEYS.forEach(k=>d[k]=read(k));return d}
-function loadGS(){return new Promise((ok,fail)=>{const cb='__gs_v4_'+Date.now()+'_'+Math.floor(Math.random()*9999),s=document.createElement('script'),to=setTimeout(()=>{clean();fail(Error('Tiempo agotado al leer Google Sheet'))},28000);function clean(){clearTimeout(to);delete window[cb];s.remove()}window[cb]=p=>{clean();ok(p)};s.onerror=()=>{clean();fail(Error('No se pudo conectar con Google Sheet'))};s.src=URL+'?action=load&callback='+encodeURIComponent(cb)+'&_='+Date.now();document.body.appendChild(s)})}
+function valid(p){return !!(p&&p.ok&&p.datasets)}
+function loadBridge(){return new Promise((ok,fail)=>{const ifr=document.createElement('iframe'),to=setTimeout(()=>{clean();fail(Error('Tiempo agotado en puente Google Sheet'))},25000);function clean(){clearTimeout(to);window.removeEventListener('message',onMsg);try{ifr.remove()}catch(e){}}function onMsg(ev){const d=ev.data||{};if(d.source!=='caja-master-google-sheet')return;clean();ok(d.payload)}window.addEventListener('message',onMsg);ifr.style.display='none';ifr.src=URL+'?action=bridge&_='+Date.now();document.body.appendChild(ifr)})}
+function loadScript(){return new Promise((ok,fail)=>{const cb='__gs_v5_'+Date.now()+'_'+Math.floor(Math.random()*9999),s=document.createElement('script'),to=setTimeout(()=>{clean();fail(Error('Tiempo agotado al leer Google Sheet'))},25000);function clean(){clearTimeout(to);delete window[cb];try{s.remove()}catch(e){}}window[cb]=p=>{clean();ok(p)};s.onerror=()=>{clean();fail(Error('No se pudo conectar con Google Sheet'))};s.src=URL+'?action=load&callback='+encodeURIComponent(cb)+'&_='+Date.now();document.body.appendChild(s)})}
+async function loadGS(){try{return await loadBridge()}catch(a){console.warn('Puente Google Sheet fallo; probando lectura alterna',a);return await loadScript()}}
 function applyGS(p){applying=true;try{KEYS.forEach(k=>localStorage.setItem(k,JSON.stringify(Array.isArray(p.datasets[k])?p.datasets[k]:[])));localStorage.setItem('ultima_carga_google_sheet',new Date().toISOString());localStorage.setItem(READY,'1')}finally{applying=false}}
-function sendGS(){return new Promise(ok=>{const f=document.createElement('form'),i=document.createElement('input'),ifr=document.createElement('iframe'),name='gs_v4_'+Date.now();ifr.name=name;ifr.style.display='none';f.method='POST';f.action=URL;f.target=name;f.style.display='none';i.type='hidden';i.name='payload';i.value=JSON.stringify({syncId:name,origin:'Caja Master',version:'GS_PATCH_V4_CLOUD_FIRST',updatedAt:new Date().toISOString(),datasets:collect()});f.appendChild(i);document.body.appendChild(ifr);document.body.appendChild(f);f.submit();setTimeout(()=>{try{f.remove();ifr.remove()}catch(e){}ok()},3500)})}
-async function cloudFirst(){st('Leyendo Google Sheet...');removeLocal();fire();try{const p=await loadGS();if(!p||!p.ok||!p.datasets)throw Error('Respuesta invalida de Google Sheet');applyGS(p);fire();st('Google Sheet cargado automaticamente.');setTimeout(()=>st(''),3000)}catch(e){st('No se pudo cargar Google Sheet. Revisa internet o permisos.');console.warn('GS_PATCH_V4 load failed',e)}}
+function sendGS(){return new Promise(ok=>{const f=document.createElement('form'),i=document.createElement('input'),ifr=document.createElement('iframe'),name='gs_v5_'+Date.now();ifr.name=name;ifr.style.display='none';f.method='POST';f.action=URL;f.target=name;f.style.display='none';i.type='hidden';i.name='payload';i.value=JSON.stringify({syncId:name,origin:'Caja Master',version:'GS_PATCH_V5_CHROME_BRIDGE',updatedAt:new Date().toISOString(),datasets:collect()});f.appendChild(i);document.body.appendChild(ifr);document.body.appendChild(f);f.submit();setTimeout(()=>{try{f.remove();ifr.remove()}catch(e){}ok()},3500)})}
+async function cloudFirst(){st('Leyendo Google Sheet...');removeLocal();fire();try{const p=await loadGS();if(!valid(p))throw Error('Respuesta invalida de Google Sheet');applyGS(p);fire();st('Google Sheet cargado automaticamente.');setTimeout(()=>st(''),3000)}catch(e){st('No se pudo cargar Google Sheet. Revisa Chrome o internet.');console.warn('GS_PATCH_V5 load failed',e)}}
 async function manualLoad(ev){if(ev){ev.preventDefault();ev.stopImmediatePropagation()}await cloudFirst()}
 async function manualSave(ev){if(ev){ev.preventDefault();ev.stopImmediatePropagation()}st('Enviando cambios a Google Sheet...');await sendGS();localStorage.setItem('ultima_sincronizacion_google_sheet',new Date().toISOString());st('Cambios enviados a Google Sheet.');setTimeout(()=>st(''),3500)}
-function bind(){document.getElementById('btnCargarGoogleSheet')?.addEventListener('click',manualLoad,true);document.getElementById('btnGuardarGoogleSheet')?.addEventListener('click',manualSave,true);const old=localStorage.setItem.bind(localStorage);localStorage.setItem=function(k,v){old(k,v);if(!applying&&KEYS.includes(k)&&localStorage.getItem(READY)==='1'){clearTimeout(timer);timer=setTimeout(()=>manualSave(),1800)}};window.__gsPatchV4={load:manualLoad,save:manualSave,cloudFirst};cloudFirst()}
+function bind(){document.getElementById('btnCargarGoogleSheet')?.addEventListener('click',manualLoad,true);document.getElementById('btnGuardarGoogleSheet')?.addEventListener('click',manualSave,true);const old=localStorage.setItem.bind(localStorage);localStorage.setItem=function(k,v){old(k,v);if(!applying&&KEYS.includes(k)&&localStorage.getItem(READY)==='1'){clearTimeout(timer);timer=setTimeout(()=>manualSave(),1800)}};window.__gsPatchV5={load:manualLoad,save:manualSave,cloudFirst};cloudFirst()}
 if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',bind);else bind();
 })();
 </script>
